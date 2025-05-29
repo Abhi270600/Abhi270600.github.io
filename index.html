@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abhishek | Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar collapsed" id="sidebar">
+      <button class="toggle-btn" onclick="toggleSidebar()">
+        <span class="toggle-text">Menu</span>
+        <span class="icon">☰</span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="sections/about.html" target="content-frame"><i class="fas fa-user"></i><span class="nav-text">About</span></a></li>
+          <li><a href="sections/education.html" target="content-frame"><i class="fas fa-graduation-cap"></i><span class="nav-text">Education</span></a></li>
+          <li><a href="sections/experience.html" target="content-frame"><i class="fas fa-briefcase"></i><span class="nav-text">Experience</span></a></li>
+          <li><a href="sections/skills.html" target="content-frame"><i class="fas fa-code"></i><span class="nav-text">Skills</span></a></li>
+          <li><a href="sections/projects.html" target="content-frame"><i class="fas fa-project-diagram"></i><span class="nav-text">Projects</span></a></li>
+          <li><a href="sections/achievements.html" target="content-frame"><i class="fas fa-trophy"></i><span class="nav-text">Achievements</span></a></li>
+          <li><a href="sections/publications.html" target="content-frame"><i class="fas fa-book"></i><span class="nav-text">Publications</span></a></li>
+          <li><a href="sections/resume.html" target="content-frame"><i class="fas fa-file-alt"></i><span class="nav-text">Resume</span></a></li>
+          <li><a href="sections/contact.html" target="content-frame"><i class="fas fa-envelope"></i><span class="nav-text">Contact</span></a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main-content">
+      <iframe name="content-frame" src="sections/about.html" frameborder="0"></iframe>
+    </main>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
