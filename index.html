@@ -1,39 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Abhishek | Portfolio</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek Adinarayanappa | Portfolio</title>
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <aside class="sidebar collapsed" id="sidebar">
-      <button class="toggle-btn" onclick="toggleSidebar()">
-        <span class="toggle-text">Menu</span>
-        <span class="icon">☰</span>
-      </button>
-      <nav>
-        <ul>
-          <li><a href="sections/about.html" target="content-frame"><i class="fas fa-user"></i><span class="nav-text">About</span></a></li>
-          <li><a href="sections/education.html" target="content-frame"><i class="fas fa-graduation-cap"></i><span class="nav-text">Education</span></a></li>
-          <li><a href="sections/experience.html" target="content-frame"><i class="fas fa-briefcase"></i><span class="nav-text">Experience</span></a></li>
-          <li><a href="sections/skills.html" target="content-frame"><i class="fas fa-code"></i><span class="nav-text">Skills</span></a></li>
-          <li><a href="sections/projects.html" target="content-frame"><i class="fas fa-project-diagram"></i><span class="nav-text">Projects</span></a></li>
-          <li><a href="sections/achievements.html" target="content-frame"><i class="fas fa-trophy"></i><span class="nav-text">Achievements</span></a></li>
-          <li><a href="sections/publications.html" target="content-frame"><i class="fas fa-book"></i><span class="nav-text">Publications</span></a></li>
-          <li><a href="sections/resume.html" target="content-frame"><i class="fas fa-file-alt"></i><span class="nav-text">Resume</span></a></li>
-          <li><a href="sections/contact.html" target="content-frame"><i class="fas fa-envelope"></i><span class="nav-text">Contact</span></a></li>
-        </ul>
-      </nav>
-    </aside>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="logo">Abhishek A</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
-    <main class="main-content">
-      <iframe name="content-frame" src="sections/about.html" frameborder="0"></iframe>
-    </main>
-  </div>
+    <!-- Hero Section -->
+    <header id="about" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Abhishek Adinarayanappa</h1>
+                <h2>Computer Science Graduate Student at NYU</h2>
+                <p>System Software Engineer | Cloud & DevOps Enthusiast | AI/ML Practitioner</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn">Contact Me</a>
+                    <a href="assets/Abhishek_Adinarayanappa_resume.pdf" class="btn btn-outline" download>Download Resume</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/profile.jpeg" alt="Abhishek Adinarayanappa">
+            </div>
+        </div>
+    </header>
 
-  <script src="assets/js/script.js"></script>
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+
+            <!-- NYU Card -->
+            <div class="education-card">
+                <div class="edu-logo">
+                    <img src="assets/images/nyu.png" alt="NYU Logo">
+                </div>
+                <div class="edu-details">
+                    <div class="edu-header">
+                        <h3>New York University</h3>
+                        <span class="location">Brooklyn, NY</span>
+                    </div>
+                    <div class="degree-row">
+                        <p class="degree">Master of Science, Computer Science</p>
+                        <span class="date">Sept 2024 - May 2026</span>
+                    </div>
+                    <p class="gpa">GPA: 3.89/4.0</p>
+                    <p class="courses">Relevant Coursework: Design & Analysis of Algorithms, Machine Learning, Big Data, Deep Learning, Cloud Computing, Blockchain</p>
+                    <a href="https://drive.google.com/file/d/1Pa9zZTh3eAFhjmxSwwZWSqbCYXOc6GZl/view?usp=sharing" class="transcript-link" target="_blank">
+                        View Official Transcript
+                    </a>
+                </div>
+            </div>
+
+            <!-- PES University Card -->
+            <div class="education-card">
+                <div class="edu-logo">
+                    <img src="assets/images/pes.png" alt="PES University Logo">
+                </div>
+                <div class="edu-details">
+                    <div class="edu-header">
+                        <h3>PES University</h3>
+                        <span class="location">Bengaluru, India</span>
+                    </div>
+                    <div class="degree-row">
+                        <p class="degree">Bachelor of Technology, Computer Science and Engineering</p>
+                        <span class="date">Aug 2018 - June 2022</span>
+                    </div>
+                    <p class="gpa">GPA: 8.62/10.0</p>
+                    <p class="courses">Relevant Coursework: Data Structures, Operating Systems, Computer Networks, Linear Algebra, Introduction to Data Science, Database Management System</p>
+                    <a href="https://drive.google.com/file/d/1xQue8XAORnj6Vy6yK2nFbFNX9uCrRLmq/view?usp=sharing" class="transcript-link" target="_blank">
+                        View Official Transcript
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/intel.jpg" alt="Intel Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>System Software Development Engineer</h3>
+                        <h4>Intel Corporation, Bengaluru</h4>
+                        <p class="timeline-date">July 2022 - July 2024</p>
+                        <ul>
+                            <li>Designed and maintained <strong>6+ microservices</strong> across <strong>3 programming languages</strong> as part of Intel® Edge Insights for Industrial project.</li>
+                            <li>Provisioned Edge Insights stack on Intel Developer Cloud, delivering a fully functional PoC within <strong>2 months</strong>.</li>
+                            <li>Built a portable storage abstraction boosting <strong>model training performance by 40%</strong> on Intel GPUs.</li>
+                            <li>Engineered components of Intel® Trust Authority using <strong>Terraform</strong> and <strong>Ansible</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/intel.jpg" alt="Intel Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Software Engineering Intern</h3>
+                        <h4>Intel Corporation, Bengaluru</h4>
+                        <p class="timeline-date">January 2022 - June 2022</p>
+                        <ul>
+                            <li>Orchestrated Proof of Concept for distributed tracing using <strong>OpenTelemetry and Jaeger</strong>.</li>
+                            <li>Enhanced error reporting features, reducing issue resolution time by <strong>20%</strong>.</li>
+                            <li>Integrated <strong>Prometheus</strong> to monitor <strong>100+ metrics/min</strong>.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/kreditbee.png" alt="Kreditbee Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Data Engineering Intern</h3>
+                        <h4>Kreditbee, Bengaluru</h4>
+                        <p class="timeline-date">August 2021 - November 2021</p>
+                        <ul>
+                            <li>Streamlined monthly ECL reports generation with <strong>Python, pandas</strong>, reducing manual effort by <strong>80%</strong>.</li>
+                            <li>Automated data ingestion from <strong>3+ sources</strong> using Python scripts.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="assets/icons/python.svg" alt="Python">
+                            <span>Python</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/C.svg" alt="C">
+                            <span>C</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/cpp3.svg" alt="C++">
+                            <span>C++</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/golang.svg" alt="Golang">
+                            <span>Golang</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/java.svg" alt="Java">
+                            <span>Java</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/javascript.svg" alt="JavaScript">
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/html5.svg" alt="HTML">
+                            <span>HTML</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/css.svg" alt="CSS">
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Technologies & Frameworks</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="assets/icons/pytorch.svg" alt="PyTorch">
+                            <span>PyTorch</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/tensorflow.svg" alt="TensorFlow">
+                            <span>TensorFlow</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/react.svg" alt="React">
+                            <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/nodejs.svg" alt="Node.js">
+                            <span>Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/numpy.svg" alt="Numpy">
+                            <span>Numpy</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/pandas.svg" alt="Pandas">
+                            <span>Pandas</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/scikitlearn.svg" alt="Scikit-learn">
+                            <span>Scikit-learn</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/api.svg" alt="REST API">
+                            <span>REST API</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/bash.svg" alt="Linux shell">
+                            <span>Linux Shell Scripting</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="assets/icons/aws.svg" alt="AWS">
+                            <span>AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/azure.svg" alt="Azure">
+                            <span>Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/docker.svg" alt="Docker">
+                            <span>Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/kubernetes.svg" alt="Kubernetes">
+                            <span>Kubernetes</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/helm.svg" alt="Helm">
+                            <span>Helm</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/terraform.svg" alt="Terraform">
+                            <span>Terraform</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/ansible.svg" alt="Ansible">
+                            <span>Ansible</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/prometheus.svg" alt="Prometheus">
+                            <span>Prometheus</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/jenkins.svg" alt="Jenkins">
+                            <span>Jenkins</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/git.svg" alt="Git">
+                            <span>Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/github.svg" alt="Github">
+                            <span>Github</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Database & Data Engineering</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <img src="assets/icons/mysql.svg" alt="MYSQL">
+                            <span>MYSQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/elasticsearch.svg" alt="Elasticsearch">
+                            <span>Elasticsearch</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/dynamodb.svg" alt="DynamoDB">
+                            <span>DynamoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/mongodb.svg" alt="MongoDB">
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/hadoop.svg" alt="Hadoop">
+                            <span>Hadoop</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/spark.svg" alt="Spark">
+                            <span>Spark</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/kafka.svg" alt="Kafka">
+                            <span>Kafka</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>GitGrep</h3>
+                        <span class="project-tag">Cloud | AI</span>
+                    </div>
+                    <p class="project-desc">A Cloud-Native Vulnerability Scanner using Semgrep & Gemini AI</p>
+                    <ul class="project-features">
+                        <li>Serverless scanner using AWS Lambda, API Gateway and DynamoDB</li>
+                        <li>Integrated Semgrep for static code analysis across 30+ languages</li>
+                        <li>Reduced average scan time to just 3 seconds with Git-based caching</li>
+                    </ul>
+                    <a href="https://github.com/Abhi270600/GitGrep" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Dining Concierge Chatbot</h3>
+                        <span class="project-tag">Serverless | AWS</span>
+                    </div>
+                    <p class="project-desc">Serverless Restaurant Recommendation System</p>
+                    <ul class="project-features">
+                        <li>Developed using AWS Lambda, API Gateway, S3, Lex and Yelp API</li>
+                        <li>Stored 5000+ restaurant records in DynamoDB with Elasticsearch indexing</li>
+                        <li>Implemented backend workflows with SQS and email via SES</li>
+                    </ul>
+                    <a href="https://github.com/Abhi270600/Dining-Concierge-Chatbot" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>DigiPulse</h3>
+                        <span class="project-tag">Big Data | AI</span>
+                    </div>
+                    <p class="project-desc">Real Time Trend Analysis using Distributed Stream Processing</p>
+                    <ul class="project-features">
+                        <li>Built pipeline to process 1M+ BlueSky tweets daily using Kafka and Spark</li>
+                        <li>Applied K-means clustering on 100K+ tweet embeddings</li>
+                        <li>Summarized trends using Google Gemini API</li>
+                    </ul>
+                    <a href="https://github.com/Abhi270600/DigiPulse" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Smart Traffic Light Controller</h3>
+                        <span class="project-tag">Deep Learning | IEEE</span>
+                    </div>
+                    <p class="project-desc">Using Deep Reinforcement Learning</p>
+                    <ul class="project-features">
+                        <li>Developed DRL-based traffic agent using SUMO</li>
+                        <li>Optimized flow for 100+ vehicles using ANNs and CNNs</li>
+                        <li>Reduced average queue length by ~80% and delay from 20 sec to ~8 sec</li>
+                    </ul>
+                    <a href="https://github.com/Abhi270600/Smart-Traffic-Light" class="project-link" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="section">
+        <div class="container">
+            <h2 class="section-title">Publications</h2>
+            <div class="publication-card">
+                <h3>Smart Traffic Light Controller using Deep Reinforcement Learning</h3>
+                <p class="pub-journal">IEEE Conference Publication</p>
+                <p class="pub-desc">Presented a novel approach to traffic light control using deep reinforcement learning techniques, demonstrating significant improvements in traffic flow optimization.</p>
+                <a href="#" class="pub-link">View Publication</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Intel Department Recognition Award</h3>
+                    <p>Received for successfully provisioning Edge Insights for Industrial stack on Intel Developer Cloud.</p>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>High GPA Recognition</h3>
+                    <p>Consistently maintained high GPA throughout academic career (3.89/4.0 at NYU, 8.62/10.0 at PES).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-columns">
+                <!-- Left Column -->
+                <div class="contact-col">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="assets/icons/gmail.svg" alt="Email">
+                        </div>
+                        <div class="contact-info">
+                            <h3>Email</h3>
+                            <a href="mailto:aa12037@nyu.edu">aa12037@nyu.edu</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="assets/icons/phone.svg" alt="Phone">
+                        </div>
+                        <div class="contact-info">
+                            <h3>Phone</h3>
+                            <a href="tel:5166468996">(516) 646-8996</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="contact-col">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
+                        </div>
+                        <div class="contact-info">
+                            <h3>LinkedIn</h3>
+                            <a href="https://linkedin.com/in/abhishek-a-26b805211" target="_blank">linkedin.com/in/abhishek-a-26b805211</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <img src="assets/icons/github.svg" alt="GitHub">
+                        </div>
+                        <div class="contact-info">
+                            <h3>GitHub</h3>
+                            <a href="https://github.com/Abhi270600" target="_blank">github.com/Abhi270600</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://github.com/Abhi270600" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
+                <a href="https://linkedin.com/in/abhishek-a-26b805211" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="mailto:aa12037@nyu.edu"><img src="assets/icons/gmail.svg" alt="Email"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/smooth-scroll.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
