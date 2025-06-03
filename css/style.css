@@ -178,62 +178,149 @@ section {
     transition: var(--transition);
 }
 
-/* Hero Section */
+/* Hero Section - Left Photo Layout */
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    height: auto;
+    min-height: 100vh;
+    padding: 120px 0 80px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-    padding-top: 80px;
 }
 
+/* Hero Section Layout */
 .hero .container {
     display: flex;
+    align-items: flex-start; /* Align items to top */
+    gap: 60px;
+}
+
+/* Hero Image - Square Format */
+.hero-image {
+    flex: 0 0 300px; /* Fixed square container */
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 25px;
+}
+
+.hero-image img {
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed equal height */
+    object-fit: cover; /* Ensures no distortion */
+    object-position: 52% 30%;
+    border-radius: 15px;
+    border: 5px solid white;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    margin-top: 35px;
+}
+
+/* Buttons container */
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 300px; /* Match image width */
+    margin-top: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+    }
+    .hero-buttons {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+    .hero-buttons {
+        width: 200px;
+    }
 }
 
 .hero-content {
     flex: 1;
-    padding-right: 50px;
 }
 
 .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 20px;
+    font-size: 2.8rem;
+    margin-bottom: 15px;
     color: var(--secondary-color);
+    line-height: 1.2;
+    margin-top: 30px;
 }
 
 .hero-content h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: var(--primary-color);
 }
 
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: var(--text-light);
+.hero-summary {
+    font-size: 1.0rem;
+    line-height: 1.6;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    max-width: 1000px;
 }
 
-.hero-buttons {
-    display: flex;
-    gap: 20px;
+/* First paragraph spacing */
+.hero-content p:first-of-type {
+    margin-top: 1.0rem;      /* 24px top spacing only for first paragraph */
 }
 
-.hero-image {
-    flex: 1;
-    text-align: center;
+/* Remove extra bottom space from last paragraph */
+.hero-content p:last-of-type {
+    margin-bottom: 0;
 }
 
-.hero-image img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 10px solid white;
-    box-shadow: var(--shadow);
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .hero-summary {
+        margin-bottom: 1rem;  /* 16px on mobile */
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image {
+        margin-bottom: 40px;
+    }
+
+    .hero-summary {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
 }
 
 /* Education Section - Fixed Layout */
