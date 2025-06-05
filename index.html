@@ -353,10 +353,11 @@
                     </div>
                     <p class="project-desc"></p>
                     <ul class="project-features">
-                        <li>Developed a serverless vulnerability scanner for GitHub repositories using AWS Lambda, API Gateway and DynamoDB,
-                        integrating Semgrep for static code analysis across 30+ languages and Gemini API for AI-powered remediation.</li>
-                        <li>Optimized scan efficiency by implementing a Git-based caching mechanism, reducing average scan time to just 3 seconds.</li>
-                        <li>Designed a responsive frontend, implemented asynchronous processing using SQS and delivered AI-remediations via Amazon SES.</li>
+                        <li>Built a scalable, serverless vulnerability scanning platform using AWS Lambda, API Gateway, S3, and DynamoDB to analyze codebases on demand.</li>
+                        <li>Integrated Semgrep for static code analysis across multiple programming languages, and used Google Gemini to generate contextual, AI-powered remediation suggestions.</li>
+                        <li>Implemented Git-based caching mechanisms to detect redundant scans, reducing unnecessary compute usage by approximately 40%.</li>
+                        <li>Designed a responsive web frontend enabling intuitive repository submission, real-time scan tracking, and results visualization.</li>
+                        <li>Enabled asynchronous scan workflows with Amazon SQS and used Amazon SES to deliver detailed scan reports and recommendations via email.</li>
                     </ul>
                     <a href="https://github.com/Abhi270600/GitGrep" class="project-link" target="_blank">View on GitHub</a>
                 </div>
@@ -380,10 +381,10 @@
                     </div>
                     <p class="project-desc"></p>
                     <ul class="project-features">
-                        <li>Built a serverless photo search application using AWS Lambda, Lex, Rekognition, and Elasticsearch.</li>
-                        <li>Enabled natural language queries to identify people, objects, landmarks, and more within images.</li>
-                        <li>Integrated a fully functional API via API Gateway with a frontend hosted on S3.</li>
-                        <li>Automated infrastructure deployment using AWS CodePipeline and CloudFormation.</li>
+                        <li>Developed a serverless photo search application using AWS Lambda, Amazon Lex, Rekognition, and Elasticsearch to enable intelligent image search.</li>
+                        <li>Enabled natural language queries to detect people, objects, landmarks, and other entities within uploaded images using Rekognition and Lex integration.</li>
+                        <li>Built and exposed a fully functional REST API via API Gateway, with a user-facing frontend hosted on Amazon S3.</li>
+                        <li>Automated infrastructure provisioning and deployment using AWS CodePipeline and CloudFormation for continuous delivery and scalability.</li>
                     </ul>
                     <a href="https://github.com/Abhi270600/CC-Assignment3-Photo-Album" class="project-link" target="_blank">View on GitHub</a>
                 </div>
@@ -407,8 +408,10 @@
                     </div>
                     <p class="project-desc"></p>
                     <ul class="project-features">
-                        <li>Built a real-time data pipeline to process 1M+ BlueSky tweets daily using Kafka, MongoDB, Vector DB, and Apache Spark.</li>
-                        <li>Applied K-means clustering on 100K+ tweet embeddings to detect emerging trends & summarized them using Google Gemini API.</li>
+                        <li>Built a real-time, scalable data pipeline for analyzing BlueSky tweets using Apache Kafka, MongoDB, Elasticsearch (vector DB), and Spark ML.</li>
+                        <li>Processed millions of tweets, enabling high-throughput ingestion, clustering, and dynamic summarization of trending topics.</li>
+                        <li>Integrated Google Gemini API to generate real-time summaries of clustered topics, enhancing interpretability of large-scale social data.</li>
+                        <li>Designed with extensibility in mind, allowing seamless future integration with additional data sources and ML models.</li>
                     </ul>
                     <a href="https://github.com/Abhi270600/DigiPulse" class="project-link" target="_blank">View on GitHub</a>
                 </div>
