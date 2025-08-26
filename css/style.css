@@ -199,7 +199,7 @@ section {
 /* Hero Section - Left Photo Layout */
 .hero {
     height: auto;
-    min-height: 100vh;
+    min-height: auto;
     padding: 120px 0 80px;
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
@@ -207,8 +207,9 @@ section {
 /* Hero Section Layout */
 .hero .container {
     display: flex;
-    align-items: flex-start; /* Align items to top */
+    align-items: center;
     gap: 60px;
+    height: 100%;
 }
 
 /* Hero Image - Square Format */
@@ -276,6 +277,105 @@ section {
 /* Remove extra bottom space from last paragraph */
 .hero-content p:last-of-type {
     margin-bottom: 0;
+}
+
+/* Mobile adjustments */
+@media (max-width: 992px) {
+    .hero {
+        padding: 100px 0 40px;
+        min-height: auto;
+    }
+
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    /* Reorder elements for mobile */
+    .hero .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-content {
+        order: 1; /* Content comes first */
+        width: 100%;
+    }
+
+    .hero-image {
+        order: 2; /* Image comes second */
+        margin-bottom: 0;
+    }
+
+    .hero-image img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .hero-buttons {
+        width: 220px;
+        margin: 0 auto;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+        margin-top: 0;
+    }
+
+    .hero-content h2 {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-summary {
+        font-size: 1.05rem;
+        text-align: left;
+        margin-bottom: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 90px 0 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.1rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-buttons {
+        width: 200px;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .hero-summary {
+        font-size: 1rem;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 400px) {
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
 }
 
 /* Education Section - Fixed Layout */
@@ -447,6 +547,58 @@ section {
 .timeline-content li {
     margin-bottom: 8px;
     font-size: 0.95rem;
+}
+
+/* Timeline Mobile Fixes */
+@media (max-width: 768px) {
+    .timeline {
+        margin-left: 0; /* Remove left margin */
+        padding-left: 0; /* Remove left padding */
+    }
+
+    .timeline::before {
+        left: 20px; /* Position timeline closer to edge */
+    }
+
+    .timeline-item {
+        padding-left: 70px; /* Reduce left padding */
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 40px;
+    }
+
+    .timeline-content {
+        margin-left: 0; /* Remove left margin */
+        padding: 20px 15px; /* Add equal padding on both sides */
+        width: 100%; /* Full width */
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .timeline-logo {
+        left: 10px; /* Position logo closer to edge */
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+    .timeline-item {
+        padding-left: 60px; /* Further reduce padding */
+    }
+
+    .timeline::before {
+        left: 15px; /* Move timeline even closer */
+    }
+
+    .timeline-logo {
+        left: 5px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .timeline-content {
+        padding: 15px 12px; /* Adjust padding */
+    }
 }
 
 /* Skills Section */
