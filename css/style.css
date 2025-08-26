@@ -167,15 +167,33 @@ section {
 .hamburger {
     display: none;
     cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    padding: 0;
 }
 
 .hamburger span {
     display: block;
-    width: 25px;
+    width: 100%;
     height: 3px;
     background: var(--secondary-color);
-    margin: 5px 0;
     transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Hero Section - Left Photo Layout */
@@ -223,27 +241,6 @@ section {
     margin-top: 30px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 992px) {
-    .hero-image img {
-        width: 250px;
-        height: 250px;
-    }
-    .hero-buttons {
-        width: 250px;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-image img {
-        width: 200px;
-        height: 200px;
-    }
-    .hero-buttons {
-        width: 200px;
-    }
-}
-
 .hero-content {
     flex: 1;
 }
@@ -279,48 +276,6 @@ section {
 /* Remove extra bottom space from last paragraph */
 .hero-content p:last-of-type {
     margin-bottom: 0;
-}
-
-/* Responsive adjustment */
-@media (max-width: 768px) {
-    .hero-summary {
-        margin-bottom: 1rem;  /* 16px on mobile */
-    }
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-    .hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-image {
-        margin-bottom: 40px;
-    }
-
-    .hero-summary {
-        max-width: 100%;
-    }
-
-    .hero-buttons {
-        justify-content: center;
-    }
-}
-
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content h2 {
-        font-size: 1.2rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
 }
 
 /* Education Section - Fixed Layout */
@@ -404,32 +359,10 @@ section {
     line-height: 1.6;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .education-card {
-        flex-direction: column;
-    }
-
-    .edu-logo {
-        width: 100%;
-        height: 120px;
-        padding: 15px;
-    }
-
-    .edu-header, .degree-row {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .location, .date {
-        align-self: flex-end;
-    }
-}
-
 /* Experience Section */
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 100%;
     margin-left: 10px;
 }
 
@@ -475,8 +408,7 @@ section {
     border-radius: 10px;
     box-shadow: var(--shadow);
     transition: var(--transition);
-    width: 1000px; /* Fixed width */
-    max-width: 80vw; /* Prevents overflow on mobile */
+    max-width: 100%;
     margin-left: 10px; /* Adjust timeline connector alignment */
 }
 
@@ -549,6 +481,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .skill-item {
@@ -841,22 +774,6 @@ section {
     color: var(--primary-color);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-columns {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .contact-col {
-        gap: 15px;
-    }
-
-    .contact-item {
-        padding: 20px;
-    }
-}
-
 /* Footer */
 footer {
     background: var(--secondary-color);
@@ -898,30 +815,41 @@ footer p {
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+    .timeline-content {
+        width: auto;
+    }
+}
+
 @media (max-width: 992px) {
     .hero .container {
         flex-direction: column;
         text-align: center;
+        gap: 40px;
     }
 
     .hero-content {
         padding-right: 0;
-        margin-bottom: 50px;
+        margin-bottom: 0;
     }
 
     .hero-buttons {
         justify-content: center;
+        margin: 0 auto;
     }
 
     .hero-image img {
         width: 250px;
         height: 250px;
+        margin-top: 0;
     }
-}
 
-@media (max-width: 768px) {
+    .hero-buttons {
+        width: 250px;
+    }
+
     .hamburger {
-        display: block;
+        display: flex;
     }
 
     .nav-links {
@@ -933,8 +861,10 @@ footer p {
         background: white;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
+        padding-top: 50px;
         transition: var(--transition);
+        z-index: 999;
     }
 
     .nav-links.active {
@@ -949,39 +879,27 @@ footer p {
         font-size: 2rem;
     }
 
-    .education-grid {
-        grid-template-columns: 1fr;
-    }
-
     .timeline::before {
-        left: 30px;
+        left: 40px;
     }
 
     .timeline-item {
-        padding-left: 70px;
+        padding-left: 80px;
     }
 
     .timeline-logo {
-        width: 60px;
-        height: 60px;
+        width: 70px;
+        height: 70px;
     }
 }
 
-@media (max-width: 576px) {
-    .hero-content h1 {
-        font-size: 2.5rem;
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
     }
 
-    .hero-content h2 {
-        font-size: 1.4rem;
-    }
-
-    .hero-buttons {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .section {
+    section {
         padding: 60px 0;
     }
 
@@ -991,12 +909,114 @@ footer p {
 
     .edu-logo {
         width: 100%;
-        height: 100px;
+        height: 120px;
+        padding: 15px;
+    }
+
+    .edu-header, .degree-row {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .location, .date {
+        align-self: flex-start;
+    }
+
+    .timeline::before {
+        left: 30px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+        margin-bottom: 40px;
+    }
+
+    .timeline-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .skill-items {
+        justify-content: center;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-columns {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-col {
+        gap: 15px;
+    }
+
+    .contact-item {
+        padding: 20px;
     }
 
     .project-header {
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .hero-buttons {
+        width: 200px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .timeline::before {
+        display: none;
+    }
+
+    .timeline-item {
+        padding-left: 0;
+    }
+
+    .timeline-logo {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    .publication-card {
+        padding: 20px;
+    }
+
+    .achievements-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .edu-details {
+        padding: 20px;
     }
 }

@@ -6,11 +6,6 @@ const navItems = document.querySelectorAll('.nav-links li');
 hamburger.addEventListener('click', () => {
     navLinks.classList.toggle('active');
     hamburger.classList.toggle('active');
-
-    // Animate hamburger icon
-    hamburger.children[0].classList.toggle('rotate-45');
-    hamburger.children[1].classList.toggle('opacity-0');
-    hamburger.children[2].classList.toggle('rotate--45');
 });
 
 // Close mobile menu when clicking a nav item
@@ -18,10 +13,15 @@ navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
         hamburger.classList.remove('active');
-        hamburger.children[0].classList.remove('rotate-45');
-        hamburger.children[1].classList.remove('opacity-0');
-        hamburger.children[2].classList.remove('rotate--45');
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+        navLinks.classList.remove('active');
+        hamburger.classList.remove('active');
+    }
 });
 
 // Navbar scroll effect
@@ -60,6 +60,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Trigger initial check
     animateOnScroll();
+
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        document.body.classList.add('resize-animation-stopper');
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            document.body.classList.remove('resize-animation-stopper');
+        }, 400);
+
+        // Reset mobile menu on larger screens
+        if (window.innerWidth > 992) {
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
 });
 
 // Add scroll event listener for animations
