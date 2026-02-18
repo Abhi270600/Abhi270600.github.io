@@ -92,8 +92,8 @@
                         <p class="degree">Master of Science, Computer Science</p>
                         <span class="date">Sept 2024 - May 2026</span>
                     </div>
-                    <p class="gpa">GPA: 3.89/4.0</p>
-                    <p class="courses">Relevant Coursework: Design & Analysis of Algorithms, Machine Learning, Big Data, Deep Learning, Cloud Computing, Blockchain</p>
+                    <p class="gpa">GPA: 3.93/4.0</p>
+                    <p class="courses">Relevant Coursework: Design & Analysis of Algorithms, Machine Learning, Big Data, Deep Learning, Cloud Computing, Computer Vision</p>
                     <a href="https://drive.google.com/file/d/1Pa9zZTh3eAFhjmxSwwZWSqbCYXOc6GZl/view?usp=sharing" class="transcript-link" target="_blank">
                         View Official Transcript
                     </a>
@@ -138,11 +138,9 @@
                         <h4>Marketeq Digital Inc., Miami, FL</h4>
                         <p class="timeline-date">June 2025 - August 2025</p>
                         <ul>
-                            <li>Engineered a scalable autocomplete feature in NestJS, capable of processing 500+ location queries per minute through LocationIQ API, significantly improving accuracy and enhancing the overall
-                                user experience for location-based searches.</li>
-                            <li>Implemented a MongoDB driven job title search with over 250 curated entries for a user profile interface, supporting real-time input and retrieval, augmented with semantic category
-                                matching using the all-MiniLM-L6-v2 model, profanity filtering and spell checks.</li>
-                            <li>Enhanced the website’s interfaces by developing reusable React components and optimizing backend APIs, resolving 20+ P1 bugs.</li>
+                            <li>Engineered a scalable autocomplete system in NestJS using the LocationIQ API, enabling precise location suggestions across millions of entries.</li>
+                            <li>Implemented a MongoDB-driven job title search supporting over 250 curated entries, with real-time input and retrieval, semantic category matching using the all-MiniLM-L6-v2 model, profanity filtering, and spell checks.</li>
+                            <li>Enhanced the platform's frontend by developing reusable React components and optimizing backend APIs, resolving 20+ P1 bugs.</li>
                         </ul>
                     </div>
                 </div>
@@ -151,16 +149,15 @@
                         <img src="assets/images/intel.jpg" alt="Intel Logo">
                     </div>
                     <div class="timeline-content">
-                        <h3>System Software Development Engineer</h3>
+                        <h3>Software Development Engineer</h3>
                         <h4>Intel Corporation, Bengaluru</h4>
                         <p class="timeline-date">July 2022 - July 2024</p>
                         <ul>
-                            <li>Designed and maintained 6+ scalable microservices across 3 programming languages as part of the Intel® Edge Insights for Industrial project.</li>
-                            <li>Developed a portable storage abstraction to optimize performance across storage and compute elements, boosting model training
-                                throughput on Intel GPUs using efficient multithreading techniques.</li>
-                            <li>Developed of a Software as a Service (SaaS) based implementation of a Trust Authority, enabling remote verification of
-                                the trustworthiness of compute assets through attestation, policy compliance, and reputation/risk data analysis.</li>
-                            <li>Led coordinated release management processes with cross-functional teams and project managers, ensuring on-time delivery of mission-critical software with zero high-severity post-launch issues.</li>
+                            <li>Designed and maintained 6+ microservices for the Intel Edge Insights for Industrial project, enabling seamless independent builds and deployments using Docker and Kubernetes.</li>
+                            <li>Provisioned the Edge Insights for Industrial stack on Intel Developer Cloud, delivering a fully functional PoC within 2 months through cross-team collaboration. Received the Intel Department Recognition Award (DRA) for this contribution.</li>
+                            <li>Built a portable storage abstraction optimizing performance across storage and compute elements, boosting model training throughput on Intel GPUs by 40% using efficient multithreading techniques.</li>
+                            <li>Engineered key components of Intel Trust Authority and provisioned secure environments using Terraform and Ansible across AWS and Azure, enhancing remote attestation capabilities and ensuring 99.95% uptime.</li>
+                            <li>Automated end-to-end environment refresh and tenant attestation with GitHub Actions, reducing tenant onboarding time from 10 minutes to 3 minutes.</li>
                         </ul>
                     </div>
                 </div>
@@ -173,9 +170,9 @@
                         <h4>Intel Corporation, Bengaluru</h4>
                         <p class="timeline-date">January 2022 - June 2022</p>
                         <ul>
-                            <li>Orchestrated a fully functional Proof of Concept for distributed tracing using OpenTelemetry and Jaeger for the Intel® Edge Insights for Industrial project.</li>
-                            <li>Enhanced error reporting and logging features in the project, reducing issue resolution time.</li>
-                            <li>Integrated Prometheus to enable real-time monitoring of 100+ metrics/min, maintaining balance between performance and efficiency.</li>
+                            <li>Orchestrated a Proof of Concept for distributed tracing in microservices using OpenTelemetry and Jaeger, capturing over 5,000 traces per minute.</li>
+                            <li>Enhanced error reporting and logging in Edge Insights for the Industrial project, achieving a 20% reduction in issue resolution time.</li>
+                            <li>Integrated Prometheus for real-time monitoring of 100+ metrics per minute, ensuring optimal performance and efficiency.</li>
                         </ul>
                     </div>
                 </div>
@@ -188,9 +185,51 @@
                         <h4>Kreditbee, Bengaluru</h4>
                         <p class="timeline-date">August 2021 - November 2021</p>
                         <ul>
-                            <li>Streamlined monthly ECL reports generation with Python, pandas, and openpyxl on MySQL data.</li>
-                            <li>Configured and deployed Lyft Amundsen for data exploration within the AWS cloud environment.</li>
-                            <li>Developed Python scripts to automate data ingestion from multiple sources into Amundsen, improving data accessibility and reducing manual integration.</li>
+                            <li>Streamlined the generation of monthly Credit Loss reports using Python and pandas on MYSQL data, achieving an 80% reduction in manual effort.</li>
+                            <li>Configured Lyft Amundsen data catalog on AWS for Snowflake metadata ingestion, indexing 500+ schemas for data discovery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Teaching Experience Section -->
+    <section id="teaching" class="section">
+        <div class="container">
+            <h2 class="section-title">Teaching Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/nyu.png" alt="NYU Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Graduate Teaching Assistant - Cloud Computing & Big Data (CS-GY 9223)</h3>
+                        <h4>New York University, Brooklyn, NY</h4>
+                        <p class="timeline-date">September 2025 - Present</p>
+                        <ul>
+                            <li>Led in-class technical demos on AWS for a class of 70+ students, showing how to use cloud infrastructure and distributed systems in real-world industry applications.</li>
+                            <li>Mentored 12+ graduate students on their final projects, providing guidance on system design, architecture, and technical implementation.</li>
+                            <li>Held weekly office hours to help students in their assignments and understand complex course material.</li>
+                            <li>Helped in designing and grading assignments/exams to test student knowledge of cloud-native technologies and industry-standard tools.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-logo">
+                        <img src="assets/images/nyu.png" alt="NYU Logo">
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Graduate Teaching Assistant - Big Data (CS-GY 6513)</h3>
+                        <h4>New York University, Brooklyn, NY</h4>
+                        <p class="timeline-date">September 2025 - December 2025</p>
+                        <ul>
+                            <li>Helped lead weekly lab sessions for 35+ students, focusing on hands-on data processing and big data frameworks used to solve real-world problems.</li>
+                            <li>Assisted students during weekly office hours with their assignments, course projects, and general technical questions.</li>
+                            <li>Contributed to developing assignments and grading rubrics for the graduate-level curriculum to ensure clear and fair evaluation standards.</li>
+                            <li>Graded student work and provided detailed feedback to help them improve their technical understanding and coding skills.</li>
+                            <li>Assisted in final project presentations and evaluations, helping to assess the quality and technical implementation of student work.</li>
                         </ul>
                     </div>
                 </div>
@@ -204,7 +243,7 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-container">
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                    <h3>Languages</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <img src="assets/icons/python.svg" alt="Python">
@@ -246,10 +285,14 @@
                             <img src="assets/icons/solidity.svg" alt="Solidity">
                             <span>Solidity</span>
                         </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/bash.svg" alt="Bash">
+                            <span>Bash</span>
+                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Technologies & Frameworks</h3>
+                    <h3>Frameworks & Libraries</h3>
                     <div class="skill-items">
                         <div class="skill-item">
                             <img src="assets/icons/pytorch.svg" alt="PyTorch">
@@ -260,8 +303,16 @@
                             <span>TensorFlow</span>
                         </div>
                         <div class="skill-item">
+                            <img src="assets/icons/opencv.svg" alt="OpenCV">
+                            <span>OpenCV</span>
+                        </div>
+                        <div class="skill-item">
                             <img src="assets/icons/react.svg" alt="React">
                             <span>React</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/django.svg" alt="Django">
+                            <span>Django</span>
                         </div>
                         <div class="skill-item">
                             <img src="assets/icons/nodejs.svg" alt="Node.js">
@@ -287,10 +338,7 @@
                             <img src="assets/icons/api.svg" alt="REST API">
                             <span>REST API</span>
                         </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/bash.svg" alt="Linux shell">
-                            <span>Linux Shell Scripting</span>
-                        </div>
+                        
                     </div>
                 </div>
                 <div class="skill-category">
@@ -303,6 +351,10 @@
                         <div class="skill-item">
                             <img src="assets/icons/azure.svg" alt="Azure">
                             <span>Azure</span>
+                        </div>
+                        <div class="skill-item">
+                            <img src="assets/icons/gcp.svg" alt="Google Cloud Platform">
+                            <span>Google Cloud Platform</span>
                         </div>
                         <div class="skill-item">
                             <img src="assets/icons/docker.svg" alt="Docker">
@@ -336,10 +388,6 @@
                             <img src="assets/icons/git.svg" alt="Git">
                             <span>Git</span>
                         </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/github.svg" alt="Github">
-                            <span>Github</span>
-                        </div>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -366,6 +414,10 @@
                             <span>MongoDB</span>
                         </div>
                         <div class="skill-item">
+                            <img src="assets/icons/redis.svg" alt="Redis">
+                            <span>Redis</span>
+                        </div>
+                        <div class="skill-item">
                             <img src="assets/icons/hadoop.svg" alt="Hadoop">
                             <span>Hadoop</span>
                         </div>
@@ -387,132 +439,398 @@
     <section id="projects" class="section bg-light">
         <div class="container">
             <h2 class="section-title">Projects</h2>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">
+                    <span class="filter-icon">⚡</span> All
+                </button>
+                <button class="filter-btn" data-filter="fullstack">
+                    <span class="filter-icon">🖥️</span> Fullstack
+                </button>
+                <button class="filter-btn" data-filter="cloud">
+                    <span class="filter-icon">☁️</span> Cloud &amp; DevOps
+                </button>
+                <button class="filter-btn" data-filter="ml">
+                    <span class="filter-icon">🤖</span> ML &amp; AI
+                </button>
+                <button class="filter-btn" data-filter="bigdata">
+                    <span class="filter-icon">📊</span> Big Data
+                </button>
+                <button class="filter-btn" data-filter="blockchain">
+                    <span class="filter-icon">🔗</span> Blockchain
+                </button>
+                <button class="filter-btn" data-filter="iot">
+                    <span class="filter-icon">📡</span> IoT &amp; Edge
+                </button>
+            </div>
+
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>GitGrep - A Cloud-Native Vulnerability Scanner using Semgrep & Gemini AI</h3>
-                        <span class="project-tag">Cloud | AWS | AI</span>
+
+                <div class="project-card" data-category="fullstack">
+                    <div class="project-card-top">
+                        <div class="project-category-badge cloud">Cloud &amp; Full Stack</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/Collabdesk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Built a scalable, serverless vulnerability scanning platform using AWS Lambda, API Gateway, S3, and DynamoDB to analyze codebases on demand.</li>
-                        <li>Integrated Semgrep for static code analysis across multiple programming languages, and used Google Gemini to generate contextual, AI-powered remediation suggestions.</li>
-                        <li>Implemented Git-based caching mechanisms to detect redundant scans, reducing unnecessary compute usage by approximately 40%.</li>
-                        <li>Designed a responsive web frontend enabling intuitive repository submission, real-time scan tracking, and results visualization.</li>
-                        <li>Enabled asynchronous scan workflows with Amazon SQS and used Amazon SES to deliver detailed scan reports and recommendations via email.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/GitGrep" class="project-link" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>BlockTalk - A Decentralized Chat App based on Blockchain</h3>
-                        <span class="project-tag">Blockchain | Decentralized Messaging</span>
+                    <h3 class="project-title">CollabDesk</h3>
+                    <p class="project-subtitle">All-in-One Collaboration Platform</p>
+                    <p class="project-summary">Unified multi-workspace platform for academic and professional teams featuring Kanban boards, calendars, resource repos, and AI-powered discussion summarization to eliminate tool fragmentation.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">Django REST</span>
+                        <span class="tech-pill">Supabase</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                        <span class="tech-pill">Gemini AI</span>
+                        <span class="tech-pill">Travis CI</span>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Designed and built a Web3-powered chat platform using Ethereum smart contracts and IPFS to enable secure, censorship-resistant messaging.</li>
-                        <li>Implemented 1-on-1 and group chat functionality using Solidity, React.js, and Ethers.js, supporting both text and media exchange with full data integrity.</li>
-                        <li>Integrated IPFS via Pinata for decentralized media storage, optimized gas usage, and enabled seamless wallet-based authentication through MetaMask.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/BlockTalk" class="project-link" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Natural language Based Photo Album</h3>
-                        <span class="project-tag">Cloud | AWS | Image Recognition</span>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">AI</span><span class="stat-label">Auto-summaries</span></div>
+                        <div class="highlight-stat"><span class="stat-num">4</span><span class="stat-label">Native productivity tools</span></div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Developed a serverless photo search application using AWS Lambda, Amazon Lex, Rekognition, and Elasticsearch to enable intelligent image search.</li>
-                        <li>Enabled natural language queries to detect people, objects, landmarks, and other entities within uploaded images using Rekognition and Lex integration.</li>
-                        <li>Built and exposed a fully functional REST API via API Gateway, with a user-facing frontend hosted on Amazon S3.</li>
-                        <li>Automated infrastructure provisioning and deployment using AWS CodePipeline and CloudFormation for continuous delivery and scalability.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/CC-Assignment3-Photo-Album" class="project-link" target="_blank">View on GitHub</a>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Dining Concierge Chatbot</h3>
-                        <span class="project-tag">Cloud | AWS</span>
+
+                <div class="project-card" data-category="fullstack cloud">
+                    <div class="project-card-top">
+                        <div class="project-category-badge cloud">Cloud &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/GitGrep" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Developed a restaurant recommendation web app using AWS Lambda, API Gateway, Amazon S3, Amazon Lex and Yelp API.</li>
-                        <li>Stored 5000+ restaurant records in DynamoDB and indexing them in Elasticsearch for efficient querying.</li>
-                        <li>Implemented backend workflows with SQS and utilized Amazon SES to deliver restaurant recommendations via email within 2 minutes.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/CC_Chatbot" class="project-link" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>DigiPulse - Real Time Trend Analysis using Distributed Stream Processing</h3>
-                        <span class="project-tag">Big Data | AI</span>
+                    <h3 class="project-title">GitGrep</h3>
+                    <p class="project-subtitle">Cloud-Native Vulnerability Scanner</p>
+                    <p class="project-summary">Serverless platform that scans GitHub repos for security vulnerabilities using Semgrep and delivers AI-powered remediation suggestions via Gemini.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">AWS Lambda</span>
+                        <span class="tech-pill">DynamoDB</span>
+                        <span class="tech-pill">SQS</span>
+                        <span class="tech-pill">Gemini AI</span>
+                        <span class="tech-pill">Semgrep</span>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Built a real-time, scalable data pipeline for analyzing BlueSky tweets using Apache Kafka, MongoDB, Elasticsearch (vector DB), and Spark ML.</li>
-                        <li>Processed millions of tweets, enabling high-throughput ingestion, clustering, and dynamic summarization of trending topics.</li>
-                        <li>Integrated Google Gemini API to generate real-time summaries of clustered topics, enhancing interpretability of large-scale social data.</li>
-                        <li>Designed with extensibility in mind, allowing seamless future integration with additional data sources and ML models.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/DigiPulse" class="project-link" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Intel® Trust Authority</h3>
-                        <span class="project-tag">Cloud | DevOps | AWS | Azure</span>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">40%</span><span class="stat-label">Less compute via caching</span></div>
+                        <div class="highlight-stat"><span class="stat-num">5+</span><span class="stat-label">Languages scanned</span></div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Project Amber aims to create the industry’s first independent Trust Authority.</li>
-                        <li>The program is a SaaS (Software as a Service) implementation of a Trust Authority that provides remote verification of the trustworthiness of a compute asset based on attestation, policy, and reputation/risk data.</li>
-                        <li>Provisioned secure development environments in ITA using Terraform and Ansible, utilizing resources from AWS and Azure to enhance remote attestation capabilities across cloud and edge environments, ensuring 99.95% uptime.</li>
-                        <li>Automated end-to-end environment refresh and attestation with GitHub Actions, reducing tenant onboarding time from 10 minutes to 3
-                        minutes.
-                        <li>Deployed the control plane & data plane services onto the environments using Helm charts and established a CI/CD pipeline for nightly runs.</li>
-                    </ul>
-                    <a href="https://www.intel.com/content/www/us/en/security/trust-authority.html" class="project-link" target="_blank">View Official Page</a>
                 </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Intel® Edge Insights for Industrial</h3>
-                        <span class="project-tag">IoT | Edge Computing | Microservices</span>
+
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-card-top">
+                        <div class="project-category-badge blockchain">Blockchain</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/BlockTalk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Intel® Edge Insights for Industrial focused on building the infrastructure layer for developing a smart scalable factory solutions using microservices and edge computing.</li>
-                        <li>Intel® Edge Insights for Industrial comes as a pre-validated, ready-to-deploy software reference design for video and time series data ingestion.</li>
-                        <li>Enabled independent builds and deployments of microservices using Docker and Kubernetes, and successfully deployed the stack on Intel Developer Cloud as a working proof of concept.</li>
-                        <li>Enhanced platform security and developer efficiency by automating Snyk-based vulnerability checks and writing unit tests with 96% code coverage using Pytest.</li>
-                    </ul>
-                    <a href="https://www.intel.com/content/www/us/en/internet-of-things/industrial-iot/edge-insights-industrial.html" class="project-link" target="_blank">View Official Page</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Smart Traffic Light Controller Using Deep Reinforcement Learning</h3>
-                        <span class="project-tag">Deep Learning | SUMO </span>
+                    <h3 class="project-title">BlockTalk</h3>
+                    <p class="project-subtitle">Decentralized Chat Application</p>
+                    <p class="project-summary">Web3-powered chat platform on Ethereum with IPFS storage that supports both 1-on-1 and group messaging with censorship-resistant, wallet-authenticated access.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Solidity</span>
+                        <span class="tech-pill">React.js</span>
+                        <span class="tech-pill">Ethers.js</span>
+                        <span class="tech-pill">IPFS</span>
+                        <span class="tech-pill">MetaMask</span>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Implemented a smart traffic agent using a SUMO simulator capable of controlling traffic congestions at intersections.</li>
-                        <li>Optimized flow for 100+ vehicles using concepts Artificial Neural Networks and Deep Reinforcement Learning</li>
-                        <li>Employed a Deep Q-Learning methodology to reduce the average queue length by ∼80% and average delay from 20 seconds to ∼8 seconds.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/Smart-traffic-light-controller-using-deep-reinforcement-learning" class="project-link" target="_blank">View on GitHub</a>
-                </div>
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Yet Another Centralized Scheduler</h3>
-                        <span class="project-tag">Big Data | python | socket programming </span>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">100%</span><span class="stat-label">Decentralized storage</span></div>
+                        <div class="highlight-stat"><span class="stat-num">0</span><span class="stat-label">Central servers</span></div>
                     </div>
-                    <p class="project-desc"></p>
-                    <ul class="project-features">
-                        <li>Developed a centralized scheduling framework in Python for Hadoop 1.0 with custom job scheduling and resource allocation.</li>
-                        <li>Programmed and evaluated 3 scheduling algorithms (First Come First Serve, Round Robin and Least Loaded), ensuring scalability,
-                        parallelism, fault tolerance, and load balancing.</li>
-                    </ul>
-                    <a href="https://github.com/Abhi270600/Yet-Another-Centralized-Scheduler" class="project-link" target="_blank">View on GitHub</a>
                 </div>
+
+                <div class="project-card" data-category="cloud ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge cloud">Cloud &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CC-Assignment3-Photo-Album" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">NL Photo Album</h3>
+                    <p class="project-subtitle">Natural Language Image Search</p>
+                    <p class="project-summary">A serverless photo search app that accepts natural language queries to find images by people, objects, and landmarks, powered by Amazon Rekognition for visual analysis and Amazon Lex for intent recognition.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">AWS Lex</span>
+                        <span class="tech-pill">Rekognition</span>
+                        <span class="tech-pill">Elasticsearch</span>
+                        <span class="tech-pill">CloudFormation</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">NLP</span><span class="stat-label">Query interface</span></div>
+                        <div class="highlight-stat"><span class="stat-num">CI/CD</span><span class="stat-label">Auto-deployed</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cloud">
+                    <div class="project-card-top">
+                        <div class="project-category-badge cloud">Cloud</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CC_Chatbot" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Dining Concierge</h3>
+                    <p class="project-subtitle">Restaurant Recommendation Chatbot</p>
+                    <p class="project-summary">A serverless restaurant recommendation chatbot built on AWS Lex and the Yelp API, delivering personalized recommendations via email within 2 minutes.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">AWS Lambda</span>
+                        <span class="tech-pill">Amazon Lex</span>
+                        <span class="tech-pill">DynamoDB</span>
+                        <span class="tech-pill">SQS</span>
+                        <span class="tech-pill">Yelp API</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">5000+</span><span class="stat-label">Restaurant records</span></div>
+                        <div class="highlight-stat"><span class="stat-num">&lt;2 min</span><span class="stat-label">Email delivery</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="bigdata ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge bigdata">Big Data &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/DigiPulse" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">DigiPulse</h3>
+                    <p class="project-subtitle">Real-Time Trend Analysis</p>
+                    <p class="project-summary">End-to-end streaming pipeline that ingests BlueSky tweets, clusters trending topics with Spark ML, and auto-generates summaries with Gemini.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Kafka</span>
+                        <span class="tech-pill">Spark ML</span>
+                        <span class="tech-pill">MongoDB</span>
+                        <span class="tech-pill">Elasticsearch</span>
+                        <span class="tech-pill">Gemini</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">1M+</span><span class="stat-label">Tweets processed</span></div>
+                        <div class="highlight-stat"><span class="stat-num">Real-time</span><span class="stat-label">Topic summaries</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="cloud iot">
+                    <div class="project-card-top">
+                        <div class="project-category-badge iot">Cloud &amp; DevOps</div>
+                        <div class="project-links-top">
+                            <a href="https://www.intel.com/content/www/us/en/security/trust-authority.html" target="_blank" title="Official Page"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Intel® Trust Authority</h3>
+                    <p class="project-subtitle">SaaS Remote Attestation Platform</p>
+                    <p class="project-summary">Industry-first independent Trust Authority for verifying compute asset trustworthiness. Provisioned secure cloud environments and automated CI/CD pipelines across AWS and Azure.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Terraform</span>
+                        <span class="tech-pill">Ansible</span>
+                        <span class="tech-pill">Helm</span>
+                        <span class="tech-pill">GitHub Actions</span>
+                        <span class="tech-pill">AWS / Azure</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">99.95%</span><span class="stat-label">Uptime</span></div>
+                        <div class="highlight-stat"><span class="stat-num">3 min</span><span class="stat-label">Tenant onboarding</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="iot">
+                    <div class="project-card-top">
+                        <div class="project-category-badge iot">IoT &amp; Edge</div>
+                        <div class="project-links-top">
+                            <a href="https://www.intel.com/content/www/us/en/internet-of-things/industrial-iot/edge-insights-industrial.html" target="_blank" title="Official Page"><i class="fas fa-external-link-alt"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Intel® Edge Insights for Industrial</h3>
+                    <p class="project-subtitle">Industrial IoT Microservices Platform</p>
+                    <p class="project-summary">A pre-validated, ready-to-deploy software reference design for building smart, scalable factory solutions, providing the infrastructure layer for video and time-series data ingestion using microservices and edge computing.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Docker</span>
+                        <span class="tech-pill">Kubernetes</span>
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Pytest</span>
+                        <span class="tech-pill">Snyk</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">96%</span><span class="stat-label">Test coverage</span></div>
+                        <div class="highlight-stat"><span class="stat-num">6+</span><span class="stat-label">Microservices</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">ML &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/Smart-traffic-light-controller-using-deep-reinforcement-learning" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                        <div class="project-links-top">
+                            <a href="https://ieeexplore.ieee.org/document/9824501" target="_blank" title="IEEE"><i class="fab fa-ieee"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Smart Traffic Light Controller using Deep Reinforcement Learning</h3>
+                    <p class="project-subtitle">RL Based traffic agent</p>
+                    <p class="project-summary">Adaptive traffic signal controller trained with Deep Q-Learning in SUMO simulation environment, reducing average intersection delay by 60% over static timing.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">Deep Q-Learning</span>
+                        <span class="tech-pill">SUMO</span>
+                        <span class="tech-pill">TraCI API</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">~80%</span><span class="stat-label">Queue reduction</span></div>
+                        <div class="highlight-stat"><span class="stat-num">1000+</span><span class="stat-label">Vehicles simulated</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="bigdata">
+                    <div class="project-card-top">
+                        <div class="project-category-badge bigdata">Big Data</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/Yet-Another-Centralized-Scheduler" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">YACS</h3>
+                    <p class="project-subtitle">Yet Another Centralized Scheduler</p>
+                    <p class="project-summary">Custom Hadoop 1.0 scheduling framework in Python featuring three algorithms (FCFS, Round Robin, and Least Loaded) with socket-based worker communication.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Hadoop</span>
+                        <span class="tech-pill">Socket Programming</span>
+                        <span class="tech-pill">Multithreading</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">3</span><span class="stat-label">Scheduling algorithms</span></div>
+                        <div class="highlight-stat"><span class="stat-num">Fault</span><span class="stat-label">Tolerant design</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">ML &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/Cifar_10_Image_Classification" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">CIFAR-10 Image Classification</h3>
+                    <p class="project-subtitle">Image Classification from Scratch using custom ResNet</p>
+                    <p class="project-summary">Designed and trained a 4.7M parameter ResNet (4-4-3 residual config) from scratch, benchmarking optimizers and schedulers with an aggressive augmentation pipeline.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">CNNs</span>
+                        <span class="tech-pill">SGD</span>
+                        <span class="tech-pill">MultiStepLR</span>
+                        <span class="tech-pill">ResNet</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">93.1%</span><span class="stat-label">Val accuracy</span></div>
+                        <div class="highlight-stat"><span class="stat-num">4.7M</span><span class="stat-label">Parameters</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">ML &amp; AI</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/LLM-finetuning-using-LoRA" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">LoRA Fine-Tuning of RoBERTa for LLMs</h3>
+                    <p class="project-subtitle">Parameter-Efficient NLP Fine-Tuning</p>
+                    <p class="project-summary">Fine-tuned RoBERTa-base on AG News using LoRA adapters, training only 0.7% of parameters. Combined contextual data augmentation with student–teacher knowledge distillation.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">HuggingFace</span>
+                        <span class="tech-pill">PEFT / LoRA</span>
+                        <span class="tech-pill">RoBERTa</span>
+                        <span class="tech-pill">Distillation</span>
+                        <span class="tech-pill">NLP</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">84.8%</span><span class="stat-label">Test accuracy</span></div>
+                        <div class="highlight-stat"><span class="stat-num">0.7%</span><span class="stat-label">Params trained</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">Computer Vision</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Constellation-Detection" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Constellation Detection</h3>
+                    <p class="project-subtitle">Night Sky Pattern Recognition</p>
+                    <p class="project-summary">A two-stage pipeline that first localizes star patches in a night sky image via high-confidence template matching, then classifies the constellation by comparing geometric arrangements using the Hungarian algorithm.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">OpenCV</span>
+                        <span class="tech-pill">Template Matching</span>
+                        <span class="tech-pill">Hungarian Algorithm</span>
+                        <span class="tech-pill">Python</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">2-stage</span><span class="stat-label">Pipeline</span></div>
+                        <div class="highlight-stat"><span class="stat-num">Scale+Rot</span><span class="stat-label">Invariant</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">Computer Vision</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Multi-Organ%20Nuclei%20Segmentation%20%26%20Classification" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Multi-Organ Nuclei Segmentation</h3>
+                    <p class="project-subtitle">Instance &amp; Semantic Segmentation</p>
+                    <p class="project-summary">Used Mask2Former (Swin-Base backbone, pre-trained on COCO panoptic) for joint instance and semantic segmentation of cell images, with augmentation to address severe class imbalance.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">Mask2Former</span>
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">Swin Transformer</span>
+                        <span class="tech-pill">Panoptic Seg</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">Panoptic</span><span class="stat-label">Segmentation</span></div>
+                        <div class="highlight-stat"><span class="stat-num">COCO</span><span class="stat-label">Pre-trained</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">Computer Vision</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Baseball%20pitch%20tracking%20and%20prediction" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Baseball Pitch Tracker</h3>
+                    <p class="project-subtitle">Strike/Ball Prediction from Video</p>
+                    <p class="project-summary">Fine-tuned a 3D ResNet-18 video encoder to classify baseball pitches as strikes or balls, with a secondary head for pitch zone prediction. A joint loss across both heads drives the shared encoder, with YOLO handling ball tracking.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">3D ResNet-18</span>
+                        <span class="tech-pill">YOLOv8</span>
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">Video ML</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">Dual</span><span class="stat-label">Output heads</span></div>
+                        <div class="highlight-stat"><span class="stat-num">3D CNN</span><span class="stat-label">Video encoder</span></div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ml">
+                    <div class="project-card-top">
+                        <div class="project-category-badge ml">Computer Vision</div>
+                        <div class="project-links-top">
+                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Geoguessr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">GeoGuessr</h3>
+                    <p class="project-subtitle">Visual Geolocation from Street Images</p>
+                    <p class="project-summary">Predicted US state and GPS coordinates from 4 street-view images using StreetCLIP embeddings, with a custom State Classifier and GPS Regressor built on top for fine-grained geolocation.</p>
+                    <div class="project-tech-stack">
+                        <span class="tech-pill">StreetCLIP</span>
+                        <span class="tech-pill">PyTorch</span>
+                        <span class="tech-pill">GPS Regression</span>
+                        <span class="tech-pill">CLIP Embeddings</span>
+                    </div>
+                    <div class="project-highlights">
+                        <div class="highlight-stat"><span class="stat-num">96.6%</span><span class="stat-label">GPS score</span></div>
+                        <div class="highlight-stat"><span class="stat-num">90.5%</span><span class="stat-label">State accuracy</span></div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -612,7 +930,7 @@
                         </div>
                         <div class="contact-info">
                             <h3>LinkedIn</h3>
-                            <a href="https://linkedin.com/in/abhishek-a-26b805211" target="_blank">abhishek-a-26b805211</a>
+                            <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank">abhishek-adinarayanappa</a>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -634,13 +952,113 @@
         <div class="container">
             <div class="social-links">
                 <a href="https://github.com/Abhi270600" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
-                <a href="https://linkedin.com/in/abhishek-a-26b805211" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+                </a>
                 <a href="mailto:aa12037@nyu.edu"><img src="assets/icons/gmail.svg" alt="Email"></a>
             </div>
+            <p class="footer-text">&copy; 2025 Abhishek Adinarayanappa. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/smooth-scroll.js"></script>
-    <script src="js/main.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // ── Mobile nav ──────────────────────────────────────────────────
+    var hamburger = document.querySelector('.hamburger');
+    var navMenu   = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('active');
+    });
+
+    document.querySelectorAll('.nav-links li').forEach(function(item) {
+        item.addEventListener('click', function() {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        });
+    });
+
+    document.addEventListener('click', function(e) {
+        if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+        }
+    });
+
+    // ── Navbar scroll ───────────────────────────────────────────────
+    window.addEventListener('scroll', function() {
+        var navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) navbar.classList.add('scrolled');
+        else navbar.classList.remove('scrolled');
+    });
+
+    // ── Scroll animations (non-project cards) ──────────────────────
+    function animateOnScroll() {
+        document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card').forEach(function(el) {
+            if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }
+        });
+    }
+
+    document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card').forEach(function(el) {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    });
+
+    animateOnScroll();
+    window.addEventListener('scroll', animateOnScroll);
+
+    // ── Project category filter ─────────────────────────────────────
+    var filterBtns   = document.querySelectorAll('.filter-btn');
+    var projectCards = document.querySelectorAll('.project-card');
+
+    function applyFilter(filter) {
+        var delay = 0;
+        projectCards.forEach(function(card) {
+            var cats = (card.getAttribute('data-category') || '').split(' ');
+            var show = (filter === 'all') || (cats.indexOf(filter) !== -1);
+
+            if (show) {
+                card.style.display = 'flex';
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(16px)';
+                (function(c, d) {
+                    setTimeout(function() {
+                        c.style.opacity = '1';
+                        c.style.transform = 'translateY(0)';
+                    }, d);
+                })(card, delay);
+                delay += 60;
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(8px)';
+                (function(c) {
+                    setTimeout(function() { c.style.display = 'none'; }, 300);
+                })(card);
+            }
+        });
+    }
+
+    filterBtns.forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            filterBtns.forEach(function(b) { b.classList.remove('active'); });
+            btn.classList.add('active');
+            applyFilter(btn.getAttribute('data-filter'));
+        });
+    });
+
+    // ── Smooth scroll ───────────────────────────────────────────────
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
+            }
+        });
+    });
+    </script>
 </body>
 </html>

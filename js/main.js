@@ -8,7 +8,6 @@ hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
 });
 
-// Close mobile menu when clicking a nav item
 navItems.forEach(item => {
     item.addEventListener('click', () => {
         navLinks.classList.remove('active');
@@ -16,7 +15,6 @@ navItems.forEach(item => {
     });
 });
 
-// Close mobile menu when clicking outside
 document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
         navLinks.classList.remove('active');
@@ -34,49 +32,79 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Initialize animations when elements come into view
+// Scroll-triggered animations (NOT project cards)
 const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .project-card, .achievement-card');
-
-    elements.forEach(element => {
-        const elementPosition = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.2;
-
-        if (elementPosition < screenPosition) {
-            element.style.opacity = '1';
-            element.style.transform = 'translateY(0)';
+    const elements = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card');
+    elements.forEach(el => {
+        if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
         }
     });
 };
 
-// Set initial state for animations
 document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .project-card, .achievement-card');
-    animatedElements.forEach(element => {
-        element.style.opacity = '0';
-        element.style.transform = 'translateY(20px)';
-        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    // Scroll animations for non-project elements
+    const animatedEls = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card');
+    animatedEls.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     });
-
-    // Trigger initial check
     animateOnScroll();
 
-    // Handle window resize
+    // Window resize
     let resizeTimer;
     window.addEventListener('resize', () => {
         document.body.classList.add('resize-animation-stopper');
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            document.body.classList.remove('resize-animation-stopper');
-        }, 400);
-
-        // Reset mobile menu on larger screens
+        resizeTimer = setTimeout(() => document.body.classList.remove('resize-animation-stopper'), 400);
         if (window.innerWidth > 992) {
             navLinks.classList.remove('active');
             hamburger.classList.remove('active');
         }
     });
+
+    // ── Project filter ──────────────────────────────────────────────
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    function applyFilter(filter) {
+        let delay = 0;
+        projectCards.forEach(card => {
+            const cats = (card.getAttribute('data-category') || '').split(' ');
+            const show = filter === 'all' || cats.includes(filter);
+
+            if (show) {
+                card.style.display = 'flex';
+                // Force reflow so transition fires
+                card.getBoundingClientRect();
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(16px)';
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, delay);
+                delay += 60;
+            } else {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(8px)';
+                setTimeout(() => { card.style.display = 'none'; }, 300);
+            }
+        });
+    }
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent document click handler interfering
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            applyFilter(btn.getAttribute('data-filter'));
+        });
+    });
+
+    // Init: show all
+    applyFilter('all');
 });
 
-// Add scroll event listener for animations
 window.addEventListener('scroll', animateOnScroll);
