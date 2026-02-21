@@ -1,1065 +1,678 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abhishek Adinarayanappa | Portfolio</title>
-    <style>
-        /* Prevent animations during resize for better performance */
-        .resize-animation-stopper * {
-            animation: none !important;
-            transition: none !important;
-        }
-
-        /* Ensure images scale properly */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    </style>
-    <link rel="stylesheet" href="css/fonts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abhishek Adinarayanappa</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav id="navbar">
-        <div class="container">
-            <div class="logo">Abhishek A</div>
-            <ul class="nav-links">
-                <li><a href="#hero">About</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#achievements">Achievements</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+<div class="cursor" id="cur"></div>
+<div class="cursor-ring" id="cur-ring"></div>
+
+<!-- ── NAVBAR ─────────────────────────────────────────────── -->
+<nav id="navbar">
+  <a class="nav-logo" href="#hero"><span>~/</span>abhishek<span>.dev</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#publications">Research</a></li>
+    <li><a href="#achievements">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- ── HERO ───────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <h1 class="name">Abhishek<br><em>Adinarayanappa</em></h1>
+      <div class="hero-role">
+        <span id="typed-role"></span><span class="cursor-blink"></span>
+      </div>
+      <p class="hero-bio">
+        Software engineer and CS grad student at NYU with a background in backend systems,
+        cloud infrastructure, and machine learning. I enjoy building things that work well at scale —
+        distributed systems, data pipelines, ML models in production.
+        <br><br>
+        I like getting into things I don't fully understand yet. That curiosity is usually where
+        my best projects start. Always happy to connect or collaborate on something interesting.
+      </p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Get in touch</a>
+        <a href="https://drive.google.com/file/d/113AF9ANqNW-xr_xMT3JMc3Gws-2FvJY0/view?usp=drive_link" target="_blank" class="btn-ghost">View resume</a>
+      </div>
+
+    </div>
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-frame">
+        <img src="assets/images/profile.jpg" alt="Abhishek Adinarayanappa">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── EDUCATION ──────────────────────────────────────────── -->
+<div class="section-wrap" id="education">
+  <div class="section-header reveal">
+    <h2 class="section-title">Education</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="edu-grid edu-single-col">
+
+    <div class="edu-card reveal">
+      <div class="edu-card-logo"><img src="assets/images/nyu.png" alt="NYU"></div>
+      <div class="edu-card-body">
+        <div class="edu-top">
+          <div class="edu-school">New York University</div>
+          <span class="edu-location">Brooklyn, NY</span>
         </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-        <div class="container">
-            <div class="hero-image">
-                <img src="assets/images/profile.jpg" alt="Abhishek Adinarayanappa">
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn">Contact Me</a>
-                    <a href="https://drive.google.com/file/d/113AF9ANqNW-xr_xMT3JMc3Gws-2FvJY0/view?usp=drive_link" class="btn btn-outline" download>Resume</a>
-                </div>
-            </div>
-            <div class="hero-content">
-                <p class="hero-tag">Software Engineer · CS @ NYU</p>
-                <h1>Abhishek Adinarayanappa</h1>
-                <h2>Computer Science Graduate Student at New York University</h2>
-                <p class="hero-summary">
-                    Hey there! I'm Abhishek, a software engineer and CS grad student at NYU with a background in backend systems, cloud infrastructure, and machine learning. I enjoy building things that work well at scale, whether that's a distributed system, a data pipeline, or an ML model running in production.
-                </p>
-                <p class="hero-summary">
-                    Outside of that I like getting into things I don't fully understand yet, which is usually how my best projects have started. Always happy to connect or collaborate on something interesting!
-                </p>
-                <!-- <p class="hero-summary">
-                    I'm passionate about building scalable backend systems and distributed architectures, along with applying machine learning in real-world applications. Whether it’s designing cloud-native services, architecting data pipelines, or integrating AI into production workflows, I enjoy working on systems that are robust, efficient, and impactful.
-                </p>
-                <p class="hero-summary">
-                    Outside of school and work, I enjoy diving into new technologies, building side projects, and contributing to open-source whenever I can. If you're curious about what I've been working on or have an interesting idea to collaborate on, feel free to reach out!
-                </p> -->
-            </div>
+        <div class="edu-row">
+          <span class="edu-degree">Master of Science, Computer Science</span>
+          <span class="edu-date">Sept 2024 &ndash; May 2026</span>
         </div>
-    </section>
+        <div class="edu-gpa">GPA: 3.93 / 4.0</div>
+        <div class="edu-courses">Design &amp; Analysis of Algorithms &middot; Machine Learning &middot; Big Data &middot; Deep Learning &middot; Cloud Computing &middot; Computer Vision</div>
+        <a href="https://drive.google.com/file/d/1OokdzNGfhDlXtLTS69alBlMUFDojxEm4/view?usp=drive_link" target="_blank" class="edu-link">
+          <i class="fas fa-arrow-up-right-from-square"></i> Official Transcript
+        </a>
+      </div>
+    </div>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-
-            <!-- NYU Card -->
-            <div class="education-card">
-                <div class="edu-logo">
-                    <img src="assets/images/nyu.png" alt="NYU Logo">
-                </div>
-                <div class="edu-details">
-                    <div class="edu-header">
-                        <h3>New York University</h3>
-                        <span class="location">Brooklyn, NY</span>
-                    </div>
-                    <div class="degree-row">
-                        <p class="degree">Master of Science, Computer Science</p>
-                        <span class="date">Sept 2024 - May 2026</span>
-                    </div>
-                    <p class="gpa">GPA: 3.93/4.0</p>
-                    <p class="courses">Relevant Coursework: Design & Analysis of Algorithms, Machine Learning, Big Data, Deep Learning, Cloud Computing, Computer Vision</p>
-                    <a href="https://drive.google.com/file/d/1Pa9zZTh3eAFhjmxSwwZWSqbCYXOc6GZl/view?usp=sharing" class="transcript-link" target="_blank">
-                        View Official Transcript
-                    </a>
-                </div>
-            </div>
-
-            <!-- PES University Card -->
-            <div class="education-card">
-                <div class="edu-logo">
-                    <img src="assets/images/pes.png" alt="PES University Logo">
-                </div>
-                <div class="edu-details">
-                    <div class="edu-header">
-                        <h3>PES University</h3>
-                        <span class="location">Bengaluru, India</span>
-                    </div>
-                    <div class="degree-row">
-                        <p class="degree">Bachelor of Technology, Computer Science and Engineering</p>
-                        <span class="date">Aug 2018 - May 2022</span>
-                    </div>
-                    <p class="gpa">GPA: 8.62/10.0</p>
-                    <p class="courses">Relevant Coursework: Data Structures, Operating Systems, Computer Networks, Linear Algebra, Introduction to Data Science, Database Management System</p>
-                    <a href="https://drive.google.com/file/d/1xQue8XAORnj6Vy6yK2nFbFNX9uCrRLmq/view?usp=sharing" class="transcript-link" target="_blank">
-                        View Official Transcript
-                    </a>
-                </div>
-            </div>
+    <div class="edu-card reveal">
+      <div class="edu-card-logo"><img src="assets/images/pes.png" alt="PES University"></div>
+      <div class="edu-card-body">
+        <div class="edu-top">
+          <div class="edu-school">PES University</div>
+          <span class="edu-location">Bengaluru, India</span>
         </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Work Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/marketeq.png" alt="Marketeq Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Backend Engineering Intern</h3>
-                        <h4>Marketeq Digital Inc., Miami, FL</h4>
-                        <p class="timeline-date">June 2025 - August 2025</p>
-                        <ul>
-                            <li>Engineered a scalable autocomplete system in NestJS using the LocationIQ API, enabling precise location suggestions across millions of entries.</li>
-                            <li>Implemented a MongoDB-driven job title search supporting over 250 curated entries, with real-time input and retrieval, semantic category matching using the all-MiniLM-L6-v2 model, profanity filtering, and spell checks.</li>
-                            <li>Enhanced the platform's frontend by developing reusable React components and optimizing backend APIs, resolving 20+ P1 bugs.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/intel.jpg" alt="Intel Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Software Development Engineer</h3>
-                        <h4>Intel Corporation, Bengaluru</h4>
-                        <p class="timeline-date">July 2022 - July 2024</p>
-                        <ul>
-                            <li>Designed and maintained 6+ microservices for the Intel Edge Insights for Industrial project, enabling seamless independent builds and deployments using Docker and Kubernetes.</li>
-                            <li>Provisioned the Edge Insights for Industrial stack on Intel Developer Cloud, delivering a fully functional PoC within 2 months through cross-team collaboration. Received the Intel Department Recognition Award (DRA) for this contribution.</li>
-                            <li>Built a portable storage abstraction optimizing performance across storage and compute elements, boosting model training throughput on Intel GPUs by 40% using efficient multithreading techniques.</li>
-                            <li>Engineered key components of Intel Trust Authority and provisioned secure environments using Terraform and Ansible across AWS and Azure, enhancing remote attestation capabilities and ensuring 99.95% uptime.</li>
-                            <li>Automated end-to-end environment refresh and tenant attestation with GitHub Actions, reducing tenant onboarding time from 10 minutes to 3 minutes.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/intel.jpg" alt="Intel Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Software Engineering Intern</h3>
-                        <h4>Intel Corporation, Bengaluru</h4>
-                        <p class="timeline-date">January 2022 - June 2022</p>
-                        <ul>
-                            <li>Orchestrated a Proof of Concept for distributed tracing in microservices using OpenTelemetry and Jaeger, capturing over 5,000 traces per minute.</li>
-                            <li>Enhanced error reporting and logging in Edge Insights for the Industrial project, achieving a 20% reduction in issue resolution time.</li>
-                            <li>Integrated Prometheus for real-time monitoring of 1000+ metrics per minute, ensuring optimal performance and efficiency.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/kreditbee.png" alt="Kreditbee Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Data Engineering Intern</h3>
-                        <h4>Kreditbee, Bengaluru</h4>
-                        <p class="timeline-date">August 2021 - November 2021</p>
-                        <ul>
-                            <li>Streamlined the generation of monthly Credit Loss reports using Python and pandas on MYSQL data, achieving an 80% reduction in manual effort.</li>
-                            <li>Configured Lyft Amundsen data catalog on AWS for Snowflake metadata ingestion, indexing 500+ schemas for data discovery.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+        <div class="edu-row">
+          <span class="edu-degree">Bachelor of Technology, Computer Science &amp; Engineering</span>
+          <span class="edu-date">Aug 2018 &ndash; May 2022</span>
         </div>
-    </section>
+        <div class="edu-gpa">GPA: 8.62 / 10.0</div>
+        <div class="edu-courses">Data Structures &middot; Operating Systems &middot; Computer Networks &middot; Linear Algebra &middot; Introduction to Data Science &middot; Database Management</div>
+        <a href="https://drive.google.com/file/d/1xQue8XAORnj6Vy6yK2nFbFNX9uCrRLmq/view?usp=sharing" target="_blank" class="edu-link">
+          <i class="fas fa-arrow-up-right-from-square"></i> Official Transcript
+        </a>
+      </div>
+    </div>
 
+  </div>
+</div>
 
-    <!-- Teaching Experience Section -->
-    <section id="teaching" class="section">
-        <div class="container">
-            <h2 class="section-title">Teaching Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/nyu.png" alt="NYU Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Graduate Teaching Assistant - Cloud Computing & Big Data (CS-GY 9223)</h3>
-                        <h4>New York University, Brooklyn, NY</h4>
-                        <p class="timeline-date">September 2025 - Present</p>
-                        <ul>
-                            <li>Led in-class technical demos on AWS for a class of 70+ students, showing how to use cloud infrastructure and distributed systems in real-world industry applications.</li>
-                            <li>Mentored 12+ graduate students on their final projects, providing guidance on system design, architecture, and technical implementation.</li>
-                            <li>Held weekly office hours to help students in their assignments and understand complex course material.</li>
-                            <li>Helped in designing and grading assignments/exams to test student knowledge of cloud-native technologies and industry-standard tools.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-logo">
-                        <img src="assets/images/nyu.png" alt="NYU Logo">
-                    </div>
-                    <div class="timeline-content">
-                        <h3>Graduate Teaching Assistant - Big Data (CS-GY 6513)</h3>
-                        <h4>New York University, Brooklyn, NY</h4>
-                        <p class="timeline-date">September 2025 - December 2025</p>
-                        <ul>
-                            <li>Helped lead weekly lab sessions for 35+ students, focusing on hands-on data processing and big data frameworks used to solve real-world problems.</li>
-                            <li>Assisted students during weekly office hours with their assignments, course projects, and general technical questions.</li>
-                            <li>Contributed to developing assignments and grading rubrics for the graduate-level curriculum to ensure clear and fair evaluation standards.</li>
-                            <li>Graded student work and provided detailed feedback to help them improve their technical understanding and coding skills.</li>
-                            <li>Assisted in final project presentations and evaluations, helping to assess the quality and technical implementation of student work.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<!-- ── WORK EXPERIENCE ────────────────────────────────────── -->
+<div class="section-wrap" id="experience">
+  <div class="section-header reveal">
+    <h2 class="section-title">Work Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">June 2025<br>August 2025</div>
+        <div class="tl-logo"><img src="assets/images/marketeq.png" alt="Marketeq"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Backend Engineering Intern</div>
+        <div class="tl-company">Marketeq Digital Inc. &middot; Miami, FL</div>
+        <ul class="tl-bullets">
+          <li>Engineered a scalable autocomplete system in NestJS using the LocationIQ API, enabling precise location suggestions across millions of entries.</li>
+          <li>Implemented a MongoDB-driven job title search supporting 250+ curated entries with semantic category matching via all-MiniLM-L6-v2, profanity filtering, and spell-check.</li>
+          <li>Developed reusable React components and optimized backend APIs, resolving 20+ P1 bugs across the platform.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">July 2022<br>July 2024</div>
+        <div class="tl-logo"><img src="assets/images/intel.jpg" alt="Intel"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Software Development Engineer</div>
+        <div class="tl-company">Intel Corporation &middot; Bengaluru</div>
+        <ul class="tl-bullets">
+          <li>Designed and maintained 6+ microservices for Intel Edge Insights for Industrial, enabling seamless independent builds and deployments using Docker and Kubernetes.</li>
+          <li>Provisioned the EII stack on Intel Developer Cloud within 2 months through cross-team collaboration — awarded the Intel Department Recognition Award for this contribution.</li>
+          <li>Built a portable storage abstraction boosting model training throughput on Intel GPUs by 40% using efficient multithreading techniques.</li>
+          <li>Engineered Intel Trust Authority components and provisioned secure environments using Terraform and Ansible across AWS and Azure, ensuring 99.95% uptime.</li>
+          <li>Automated end-to-end environment refresh with GitHub Actions, reducing tenant onboarding time from 10 minutes to 3 minutes.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">January 2022<br>June 2022</div>
+        <div class="tl-logo"><img src="assets/images/intel.jpg" alt="Intel"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Software Engineering Intern</div>
+        <div class="tl-company">Intel Corporation &middot; Bengaluru</div>
+        <ul class="tl-bullets">
+          <li>Orchestrated a PoC for distributed tracing in microservices using OpenTelemetry and Jaeger, capturing 5,000+ traces per minute.</li>
+          <li>Enhanced error reporting and logging in Edge Insights, achieving a 20% reduction in issue resolution time.</li>
+          <li>Integrated Prometheus for real-time monitoring of 1,000+ metrics per minute, ensuring optimal performance and efficiency.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">August 2021<br>November 2021</div>
+        <div class="tl-logo"><img src="assets/images/kreditbee.png" alt="Kreditbee"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Data Engineering Intern</div>
+        <div class="tl-company">Kreditbee &middot; Bengaluru</div>
+        <ul class="tl-bullets">
+          <li>Streamlined monthly Credit Loss report generation using Python and pandas on MySQL data, achieving an 80% reduction in manual effort.</li>
+          <li>Configured Lyft Amundsen data catalog on AWS for Snowflake metadata ingestion, indexing 500+ schemas for data discovery.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── TEACHING EXPERIENCE ────────────────────────────────── -->
+<div class="section-wrap" id="teaching">
+  <div class="section-header reveal">
+    <h2 class="section-title">Teaching Experience</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="timeline">
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">September 2025<br>Present</div>
+        <div class="tl-logo"><img src="assets/images/nyu.png" alt="NYU"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Graduate Teaching Assistant &mdash; Cloud Computing &amp; Big Data (CS-GY 9223)</div>
+        <div class="tl-company">New York University &middot; Brooklyn, NY</div>
+        <ul class="tl-bullets">
+          <li>Led in-class technical demos on AWS for a class of 70+ students, covering cloud infrastructure and distributed systems in real-world industry applications.</li>
+          <li>Mentored 12+ graduate students on their final projects, providing guidance on system design, architecture, and technical implementation.</li>
+          <li>Held weekly office hours to help students navigate assignments and understand complex course material.</li>
+          <li>Helped design and grade assignments and exams on cloud-native technologies and industry-standard tools.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="tl-item reveal">
+      <div class="tl-left">
+        <div class="tl-date">September 2025<br>December 2025</div>
+        <div class="tl-logo"><img src="assets/images/nyu.png" alt="NYU"></div>
+      </div>
+      <div class="tl-content">
+        <div class="tl-role">Graduate Teaching Assistant &mdash; Big Data (CS-GY 6513)</div>
+        <div class="tl-company">New York University &middot; Brooklyn, NY</div>
+        <ul class="tl-bullets">
+          <li>Led weekly lab sessions for 35+ students on hands-on data processing and big data frameworks applied to real-world problems.</li>
+          <li>Assisted students during office hours with assignments, course projects, and general technical questions.</li>
+          <li>Contributed to developing assignments and grading rubrics ensuring clear and fair evaluation standards.</li>
+          <li>Assisted in final project presentations and evaluations, assessing quality and technical implementation of student work.</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── SKILLS ──────────────────────────────────────────────── -->
+<div class="section-wrap" id="skills">
+  <div class="section-header reveal">
+    <h2 class="section-title">Technical Skills</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="skills-wrap">
+    <div class="reveal">
+      <div class="skill-group-title">Languages</div>
+      <div class="skill-group-underline"></div>
+      <div class="skill-tags"><span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/python.svg" alt=""></span><span>Python</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/C.svg" alt=""></span><span>C</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/cpp3.svg" alt=""></span><span>C++</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/golang.svg" alt=""></span><span>Go</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/java.svg" alt=""></span><span>Java</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/javascript.svg" alt=""></span><span>JavaScript</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/typescript.svg" alt=""></span><span>TypeScript</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/html5.svg" alt=""></span><span>HTML</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/css.svg" alt=""></span><span>CSS</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/solidity.svg" alt=""></span><span>Solidity</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/bash.svg" alt=""></span><span>Bash</span></span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-group-title">Frameworks &amp; Libraries</div>
+      <div class="skill-group-underline"></div>
+      <div class="skill-tags"><span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/pytorch.svg" alt=""></span><span>PyTorch</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/tensorflow.svg" alt=""></span><span>TensorFlow</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/opencv.svg" alt=""></span><span>OpenCV</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/react.svg" alt=""></span><span>React</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/django.svg" alt=""></span><span>Django</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/nodejs.svg" alt=""></span><span>Node.js</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/nestjs.svg" alt=""></span><span>NestJS</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/numpy.svg" alt=""></span><span>NumPy</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/pandas.svg" alt=""></span><span>Pandas</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/scikitlearn.svg" alt=""></span><span>Scikit-learn</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/api.svg" alt=""></span><span>REST API</span></span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-group-title">Cloud &amp; DevOps</div>
+      <div class="skill-group-underline"></div>
+      <div class="skill-tags"><span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/aws.svg" alt=""></span><span>AWS</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/azure.svg" alt=""></span><span>Azure</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/gcp.svg" alt=""></span><span>GCP</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/docker.svg" alt=""></span><span>Docker</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/kubernetes.svg" alt=""></span><span>Kubernetes</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/helm.svg" alt=""></span><span>Helm</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/terraform.svg" alt=""></span><span>Terraform</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/ansible.svg" alt=""></span><span>Ansible</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/prometheus.svg" alt=""></span><span>Prometheus</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/jenkins.svg" alt=""></span><span>Jenkins</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/git.svg" alt=""></span><span>Git</span></span>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="skill-group-title">Database &amp; Data Engineering</div>
+      <div class="skill-group-underline"></div>
+      <div class="skill-tags"><span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/mysql.svg" alt=""></span><span>MySQL</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/postgres.svg" alt=""></span><span>PostgreSQL</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/elasticsearch.svg" alt=""></span><span>Elasticsearch</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/dynamodb.svg" alt=""></span><span>DynamoDB</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/mongodb.svg" alt=""></span><span>MongoDB</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/redis.svg" alt=""></span><span>Redis</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/hadoop.svg" alt=""></span><span>Hadoop</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/spark.svg" alt=""></span><span>Spark</span></span>
+        <span class="skill-tag"><span class="skill-tag-icon"><img src="assets/icons/kafka.svg" alt=""></span><span>Kafka</span></span>
+      </div>
+    </div>
+</div>
+</div>
+
+<!-- ── PROJECTS ────────────────────────────────────────────── -->
+<div class="section-wrap" id="projects">
+  <div class="section-header reveal">
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="proj-filters reveal">
+    <button class="pf-btn active" data-filter="all"><span>⚡</span> All</button>
+    <button class="pf-btn" data-filter="fullstack"><span>🖥️</span> Full Stack</button>
+    <button class="pf-btn" data-filter="cloud"><span>☁️</span> Cloud &amp; DevOps</button>
+    <button class="pf-btn" data-filter="ml"><span>🤖</span> ML &amp; AI</button>
+    <button class="pf-btn" data-filter="bigdata"><span>📊</span> Big Data</button>
+    <button class="pf-btn" data-filter="blockchain"><span>🔗</span> Blockchain</button>
+    <button class="pf-btn" data-filter="iot"><span>📡</span> IoT &amp; Edge</button>
+  </div>
+
+  <div class="proj-grid">
+
+    <div class="proj-card" data-category="fullstack">
+      <div class="proj-card-top">
+        <span class="proj-badge fullstack">Full Stack</span>
+        <a href="https://github.com/Abhi270600/Collabdesk" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">CollabDesk</div>
+      <div class="proj-sub">All-in-One Collaboration Platform</div>
+      <div class="proj-desc">Unified multi-workspace platform for academic and professional teams featuring Kanban boards, calendars, resource repos, and AI-powered discussion summarization to eliminate tool fragmentation.</div>
+      <div class="proj-pills"><span class="proj-pill">React</span><span class="proj-pill">Django REST</span><span class="proj-pill">Supabase</span><span class="proj-pill">PostgreSQL</span><span class="proj-pill">Gemini AI</span><span class="proj-pill">Travis CI</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">AI</div><div class="pstat-label">Auto-summaries</div></div>
+        <div class="pstat"><div class="pstat-val">4</div><div class="pstat-label">Native tools</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="fullstack cloud">
+      <div class="proj-card-top">
+        <span class="proj-badge cloud">Cloud &amp; AI</span>
+        <a href="https://github.com/Abhi270600/GitGrep" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">GitGrep</div>
+      <div class="proj-sub">Cloud-Native Vulnerability Scanner</div>
+      <div class="proj-desc">Serverless platform that scans GitHub repos for security vulnerabilities using Semgrep and delivers AI-powered remediation suggestions via Gemini.</div>
+      <div class="proj-pills"><span class="proj-pill">AWS Lambda</span><span class="proj-pill">DynamoDB</span><span class="proj-pill">SQS</span><span class="proj-pill">Gemini AI</span><span class="proj-pill">Semgrep</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">40%</div><div class="pstat-label">Less compute</div></div>
+        <div class="pstat"><div class="pstat-val">5+</div><div class="pstat-label">Languages scanned</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="blockchain">
+      <div class="proj-card-top">
+        <span class="proj-badge blockchain">Blockchain</span>
+        <a href="https://github.com/Abhi270600/BlockTalk" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">BlockTalk</div>
+      <div class="proj-sub">Decentralized Chat Application</div>
+      <div class="proj-desc">Web3-powered chat platform on Ethereum with IPFS storage supporting 1-on-1 and group messaging with censorship-resistant, wallet-authenticated access.</div>
+      <div class="proj-pills"><span class="proj-pill">Solidity</span><span class="proj-pill">React.js</span><span class="proj-pill">Ethers.js</span><span class="proj-pill">IPFS</span><span class="proj-pill">MetaMask</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">100%</div><div class="pstat-label">Decentralized</div></div>
+        <div class="pstat"><div class="pstat-val">0</div><div class="pstat-label">Central servers</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="cloud ml">
+      <div class="proj-card-top">
+        <span class="proj-badge cloud">Cloud &amp; AI</span>
+        <a href="https://github.com/Abhi270600/CC-Assignment3-Photo-Album" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">NL Photo Album</div>
+      <div class="proj-sub">Natural Language Image Search</div>
+      <div class="proj-desc">Serverless photo search app that accepts natural language queries to find images by people, objects, and landmarks — powered by Amazon Rekognition for visual analysis and Amazon Lex for intent recognition.</div>
+      <div class="proj-pills"><span class="proj-pill">AWS Lex</span><span class="proj-pill">Rekognition</span><span class="proj-pill">Elasticsearch</span><span class="proj-pill">CloudFormation</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">NLP</div><div class="pstat-label">Query interface</div></div>
+        <div class="pstat"><div class="pstat-val">CI/CD</div><div class="pstat-label">Auto-deployed</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="cloud">
+      <div class="proj-card-top">
+        <span class="proj-badge cloud">Cloud</span>
+        <a href="https://github.com/Abhi270600/CC_Chatbot" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">Dining Concierge</div>
+      <div class="proj-sub">Restaurant Recommendation Chatbot</div>
+      <div class="proj-desc">Serverless chatbot on AWS Lex and the Yelp API storing 5,000+ restaurant records in DynamoDB with Elasticsearch querying, delivering personalized recommendations via email within 2 minutes.</div>
+      <div class="proj-pills"><span class="proj-pill">AWS Lambda</span><span class="proj-pill">Amazon Lex</span><span class="proj-pill">DynamoDB</span><span class="proj-pill">SQS</span><span class="proj-pill">Yelp API</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">5,000+</div><div class="pstat-label">Restaurants</div></div>
+        <div class="pstat"><div class="pstat-val">&lt;2 min</div><div class="pstat-label">Email delivery</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="bigdata ml">
+      <div class="proj-card-top">
+        <span class="proj-badge bigdata">Big Data &amp; AI</span>
+        <a href="https://github.com/Abhi270600/DigiPulse" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">DigiPulse</div>
+      <div class="proj-sub">Real-Time Social Trend Analysis</div>
+      <div class="proj-desc">End-to-end streaming pipeline that ingests BlueSky posts, clusters trending topics with Spark ML, and auto-generates summaries with Gemini in real time.</div>
+      <div class="proj-pills"><span class="proj-pill">Kafka</span><span class="proj-pill">Spark ML</span><span class="proj-pill">MongoDB</span><span class="proj-pill">Elasticsearch</span><span class="proj-pill">Gemini</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">1M+</div><div class="pstat-label">Posts processed</div></div>
+        <div class="pstat"><div class="pstat-val">Real-time</div><div class="pstat-label">Topic summaries</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="cloud iot">
+      <div class="proj-card-top">
+        <span class="proj-badge iot">Cloud &amp; DevOps</span>
+        <a href="https://www.intel.com/content/www/us/en/security/trust-authority.html" target="_blank" class="proj-ext-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <div class="proj-title">Intel&reg; Trust Authority</div>
+      <div class="proj-sub">SaaS Remote Attestation Platform</div>
+      <div class="proj-desc">Industry-first independent Trust Authority for verifying compute asset trustworthiness. Provisioned secure cloud environments and automated CI/CD pipelines across AWS and Azure.</div>
+      <div class="proj-pills"><span class="proj-pill">Terraform</span><span class="proj-pill">Ansible</span><span class="proj-pill">Helm</span><span class="proj-pill">GitHub Actions</span><span class="proj-pill">AWS / Azure</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">99.95%</div><div class="pstat-label">Uptime</div></div>
+        <div class="pstat"><div class="pstat-val">3 min</div><div class="pstat-label">Tenant onboarding</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="iot">
+      <div class="proj-card-top">
+        <span class="proj-badge iot">IoT &amp; Edge</span>
+        <a href="https://www.intel.com/content/www/us/en/internet-of-things/industrial-iot/edge-insights-industrial.html" target="_blank" class="proj-ext-link"><i class="fas fa-arrow-up-right-from-square"></i></a>
+      </div>
+      <div class="proj-title">Intel&reg; Edge Insights for Industrial</div>
+      <div class="proj-sub">Industrial IoT Microservices Platform</div>
+      <div class="proj-desc">Pre-validated, ready-to-deploy software reference design for smart, scalable factory solutions — providing the infrastructure layer for video and time-series data ingestion via microservices and edge computing.</div>
+      <div class="proj-pills"><span class="proj-pill">Docker</span><span class="proj-pill">Kubernetes</span><span class="proj-pill">Python</span><span class="proj-pill">Pytest</span><span class="proj-pill">Snyk</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">96%</div><div class="pstat-label">Test coverage</div></div>
+        <div class="pstat"><div class="pstat-val">6+</div><div class="pstat-label">Microservices</div></div>
+      </div>
+    </div>
+
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge ml">ML &amp; AI</span>
+        <div style="display:flex;gap:10px;">
+          <a href="https://github.com/Abhi270600/Smart-traffic-light-controller-using-deep-reinforcement-learning" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+          <a href="https://ieeexplore.ieee.org/document/9824501" target="_blank" class="proj-ext-link"><i class="fas fa-book-open"></i></a>
         </div>
-    </section>
+      </div>
+      <div class="proj-title">Smart Traffic Light Controller</div>
+      <div class="proj-sub">Deep Reinforcement Learning Agent</div>
+      <div class="proj-desc">Adaptive traffic signal controller trained with Deep Q-Learning in SUMO simulation, reducing average intersection queue length by ~80% and cutting average delay from 20s to ~8s.</div>
+      <div class="proj-pills"><span class="proj-pill">PyTorch</span><span class="proj-pill">Deep Q-Learning</span><span class="proj-pill">SUMO</span><span class="proj-pill">TraCI API</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">~80%</div><div class="pstat-label">Queue reduction</div></div>
+        <div class="pstat"><div class="pstat-val">1,000+</div><div class="pstat-label">Vehicles simulated</div></div>
+      </div>
+    </div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="assets/icons/python.svg" alt="Python">
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/C.svg" alt="C">
-                            <span>C</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/cpp3.svg" alt="C++">
-                            <span>C++</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/golang.svg" alt="Golang">
-                            <span>Golang</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/java.svg" alt="Java">
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/javascript.svg" alt="JavaScript">
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/typescript.svg" alt="TypeScript">
-                            <span>TypeScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/html5.svg" alt="HTML">
-                            <span>HTML</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/css.svg" alt="CSS">
-                            <span>CSS</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/solidity.svg" alt="Solidity">
-                            <span>Solidity</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/bash.svg" alt="Bash">
-                            <span>Bash</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Frameworks & Libraries</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="assets/icons/pytorch.svg" alt="PyTorch">
-                            <span>PyTorch</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/tensorflow.svg" alt="TensorFlow">
-                            <span>TensorFlow</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/opencv.svg" alt="OpenCV">
-                            <span>OpenCV</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/react.svg" alt="React">
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/django.svg" alt="Django">
-                            <span>Django</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/nodejs.svg" alt="Node.js">
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/nestjs.svg" alt="Nest.js">
-                            <span>NestJS</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/numpy.svg" alt="Numpy">
-                            <span>Numpy</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/pandas.svg" alt="Pandas">
-                            <span>Pandas</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/scikitlearn.svg" alt="Scikit-learn">
-                            <span>Scikit-learn</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/api.svg" alt="REST API">
-                            <span>REST API</span>
-                        </div>
-                        
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Cloud & DevOps</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="assets/icons/aws.svg" alt="AWS">
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/azure.svg" alt="Azure">
-                            <span>Azure</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/gcp.svg" alt="Google Cloud Platform">
-                            <span>Google Cloud Platform</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/docker.svg" alt="Docker">
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/kubernetes.svg" alt="Kubernetes">
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/helm.svg" alt="Helm">
-                            <span>Helm</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/terraform.svg" alt="Terraform">
-                            <span>Terraform</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/ansible.svg" alt="Ansible">
-                            <span>Ansible</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/prometheus.svg" alt="Prometheus">
-                            <span>Prometheus</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/jenkins.svg" alt="Jenkins">
-                            <span>Jenkins</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/git.svg" alt="Git">
-                            <span>Git</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Database & Data Engineering</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <img src="assets/icons/mysql.svg" alt="MYSQL">
-                            <span>MYSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/postgres.svg" alt="PostgreSQL">
-                            <span>PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/elasticsearch.svg" alt="Elasticsearch">
-                            <span>Elasticsearch</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/dynamodb.svg" alt="DynamoDB">
-                            <span>DynamoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/mongodb.svg" alt="MongoDB">
-                            <span>MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/redis.svg" alt="Redis">
-                            <span>Redis</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/hadoop.svg" alt="Hadoop">
-                            <span>Hadoop</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/spark.svg" alt="Spark">
-                            <span>Spark</span>
-                        </div>
-                        <div class="skill-item">
-                            <img src="assets/icons/kafka.svg" alt="Kafka">
-                            <span>Kafka</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div class="proj-card" data-category="bigdata">
+      <div class="proj-card-top">
+        <span class="proj-badge bigdata">Big Data</span>
+        <a href="https://github.com/Abhi270600/Yet-Another-Centralized-Scheduler" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">YACS</div>
+      <div class="proj-sub">Yet Another Centralized Scheduler</div>
+      <div class="proj-desc">Custom Hadoop 1.0 scheduling framework featuring three algorithms (FCFS, Round Robin, and Least Loaded) with socket-based worker communication and fault-tolerant design.</div>
+      <div class="proj-pills"><span class="proj-pill">Python</span><span class="proj-pill">Hadoop</span><span class="proj-pill">Socket Programming</span><span class="proj-pill">Multithreading</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">3</div><div class="pstat-label">Scheduling algos</div></div>
+        <div class="pstat"><div class="pstat-val">Fault</div><div class="pstat-label">Tolerant design</div></div>
+      </div>
+    </div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Projects</h2>
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge ml">ML &amp; AI</span>
+        <a href="https://github.com/Abhi270600/Cifar_10_Image_Classification" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">CIFAR-10 Image Classification</div>
+      <div class="proj-sub">Custom ResNet from Scratch</div>
+      <div class="proj-desc">Designed and trained a 4.7M parameter ResNet (4-4-3 residual config) from scratch, benchmarking optimizers and schedulers with an aggressive augmentation pipeline.</div>
+      <div class="proj-pills"><span class="proj-pill">PyTorch</span><span class="proj-pill">ResNet</span><span class="proj-pill">CNNs</span><span class="proj-pill">SGD</span><span class="proj-pill">MultiStepLR</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">93.1%</div><div class="pstat-label">Val accuracy</div></div>
+        <div class="pstat"><div class="pstat-val">4.7M</div><div class="pstat-label">Parameters</div></div>
+      </div>
+    </div>
 
-            <div class="project-filters">
-                <button class="filter-btn active" data-filter="all">
-                    <span class="filter-icon">⚡</span> All
-                </button>
-                <button class="filter-btn" data-filter="fullstack">
-                    <span class="filter-icon">🖥️</span> Fullstack
-                </button>
-                <button class="filter-btn" data-filter="cloud">
-                    <span class="filter-icon">☁️</span> Cloud &amp; DevOps
-                </button>
-                <button class="filter-btn" data-filter="ml">
-                    <span class="filter-icon">🤖</span> ML &amp; AI
-                </button>
-                <button class="filter-btn" data-filter="bigdata">
-                    <span class="filter-icon">📊</span> Big Data
-                </button>
-                <button class="filter-btn" data-filter="blockchain">
-                    <span class="filter-icon">🔗</span> Blockchain
-                </button>
-                <button class="filter-btn" data-filter="iot">
-                    <span class="filter-icon">📡</span> IoT &amp; Edge
-                </button>
-            </div>
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge ml">ML &amp; AI</span>
+        <a href="https://github.com/Abhi270600/LLM-finetuning-using-LoRA" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">LoRA Fine-Tuning &mdash; RoBERTa</div>
+      <div class="proj-sub">Parameter-Efficient NLP Fine-Tuning</div>
+      <div class="proj-desc">Fine-tuned RoBERTa-base on AG News using LoRA adapters, training only 0.7% of parameters. Combined contextual data augmentation with student&ndash;teacher knowledge distillation.</div>
+      <div class="proj-pills"><span class="proj-pill">HuggingFace</span><span class="proj-pill">PEFT / LoRA</span><span class="proj-pill">RoBERTa</span><span class="proj-pill">Distillation</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">84.8%</div><div class="pstat-label">Test accuracy</div></div>
+        <div class="pstat"><div class="pstat-val">0.7%</div><div class="pstat-label">Params trained</div></div>
+      </div>
+    </div>
 
-            <div class="projects-grid">
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge cv">Computer Vision</span>
+        <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Constellation-Detection" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">Constellation Detection</div>
+      <div class="proj-sub">Night Sky Pattern Recognition</div>
+      <div class="proj-desc">Two-stage pipeline that localizes star patches via high-confidence template matching, then classifies the constellation by comparing geometric arrangements using the Hungarian algorithm — robust to scale and orientation.</div>
+      <div class="proj-pills"><span class="proj-pill">OpenCV</span><span class="proj-pill">Template Matching</span><span class="proj-pill">Hungarian Algorithm</span><span class="proj-pill">Python</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">2-stage</div><div class="pstat-label">Pipeline</div></div>
+        <div class="pstat"><div class="pstat-val">Scale+Rot</div><div class="pstat-label">Invariant</div></div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="fullstack">
-                    <div class="project-card-top">
-                        <div class="project-category-badge cloud">Cloud &amp; Full Stack</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/Collabdesk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">CollabDesk</h3>
-                    <p class="project-subtitle">All-in-One Collaboration Platform</p>
-                    <p class="project-summary">Unified multi-workspace platform for academic and professional teams featuring Kanban boards, calendars, resource repos, and AI-powered discussion summarization to eliminate tool fragmentation.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">React</span>
-                        <span class="tech-pill">Django REST</span>
-                        <span class="tech-pill">Supabase</span>
-                        <span class="tech-pill">PostgreSQL</span>
-                        <span class="tech-pill">Gemini AI</span>
-                        <span class="tech-pill">Travis CI</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">AI</span><span class="stat-label">Auto-summaries</span></div>
-                        <div class="highlight-stat"><span class="stat-num">4</span><span class="stat-label">Native productivity tools</span></div>
-                    </div>
-                </div>
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge cv">Computer Vision</span>
+        <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Multi-Organ%20Nuclei%20Segmentation%20%26%20Classification" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">Multi-Organ Nuclei Segmentation</div>
+      <div class="proj-sub">Instance &amp; Semantic Segmentation</div>
+      <div class="proj-desc">Used Mask2Former (Swin-Base backbone, pre-trained on COCO panoptic) for joint instance and semantic segmentation of cell images, with augmentation to address severe class imbalance.</div>
+      <div class="proj-pills"><span class="proj-pill">Mask2Former</span><span class="proj-pill">PyTorch</span><span class="proj-pill">Swin Transformer</span><span class="proj-pill">Panoptic Seg</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">Panoptic</div><div class="pstat-label">Segmentation</div></div>
+        <div class="pstat"><div class="pstat-val">COCO</div><div class="pstat-label">Pre-trained</div></div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="fullstack cloud">
-                    <div class="project-card-top">
-                        <div class="project-category-badge cloud">Cloud &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/GitGrep" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">GitGrep</h3>
-                    <p class="project-subtitle">Cloud-Native Vulnerability Scanner</p>
-                    <p class="project-summary">Serverless platform that scans GitHub repos for security vulnerabilities using Semgrep and delivers AI-powered remediation suggestions via Gemini.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">AWS Lambda</span>
-                        <span class="tech-pill">DynamoDB</span>
-                        <span class="tech-pill">SQS</span>
-                        <span class="tech-pill">Gemini AI</span>
-                        <span class="tech-pill">Semgrep</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">40%</span><span class="stat-label">Less compute via caching</span></div>
-                        <div class="highlight-stat"><span class="stat-num">5+</span><span class="stat-label">Languages scanned</span></div>
-                    </div>
-                </div>
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge cv">Computer Vision</span>
+        <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Baseball%20pitch%20tracking%20and%20prediction" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">Baseball Pitch Tracker</div>
+      <div class="proj-sub">Strike/Ball Prediction from Video</div>
+      <div class="proj-desc">Fine-tuned a 3D ResNet-18 video encoder to classify pitches as strikes or balls, with a secondary zone-prediction head. Joint loss across both heads; YOLO handles ball tracking.</div>
+      <div class="proj-pills"><span class="proj-pill">3D ResNet-18</span><span class="proj-pill">YOLOv8</span><span class="proj-pill">PyTorch</span><span class="proj-pill">Video ML</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">Dual</div><div class="pstat-label">Output heads</div></div>
+        <div class="pstat"><div class="pstat-val">3D CNN</div><div class="pstat-label">Video encoder</div></div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="blockchain">
-                    <div class="project-card-top">
-                        <div class="project-category-badge blockchain">Blockchain</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/BlockTalk" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">BlockTalk</h3>
-                    <p class="project-subtitle">Decentralized Chat Application</p>
-                    <p class="project-summary">Web3-powered chat platform on Ethereum with IPFS storage that supports both 1-on-1 and group messaging with censorship-resistant, wallet-authenticated access.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Solidity</span>
-                        <span class="tech-pill">React.js</span>
-                        <span class="tech-pill">Ethers.js</span>
-                        <span class="tech-pill">IPFS</span>
-                        <span class="tech-pill">MetaMask</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">100%</span><span class="stat-label">Decentralized storage</span></div>
-                        <div class="highlight-stat"><span class="stat-num">0</span><span class="stat-label">Central servers</span></div>
-                    </div>
-                </div>
+    <div class="proj-card" data-category="ml">
+      <div class="proj-card-top">
+        <span class="proj-badge cv">Computer Vision</span>
+        <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Geoguessr" target="_blank" class="proj-ext-link"><i class="fab fa-github"></i></a>
+      </div>
+      <div class="proj-title">GeoGuessr AI</div>
+      <div class="proj-sub">Visual Geolocation from Street Images</div>
+      <div class="proj-desc">Predicted US state and GPS coordinates from 4 street-view images using StreetCLIP embeddings, with a custom State Classifier and GPS Regressor for fine-grained geolocation.</div>
+      <div class="proj-pills"><span class="proj-pill">StreetCLIP</span><span class="proj-pill">PyTorch</span><span class="proj-pill">GPS Regression</span><span class="proj-pill">CLIP Embeddings</span></div>
+      <div class="proj-stats">
+        <div class="pstat"><div class="pstat-val">96.6%</div><div class="pstat-label">GPS score</div></div>
+        <div class="pstat"><div class="pstat-val">90.5%</div><div class="pstat-label">State accuracy</div></div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="cloud ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge cloud">Cloud &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CC-Assignment3-Photo-Album" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">NL Photo Album</h3>
-                    <p class="project-subtitle">Natural Language Image Search</p>
-                    <p class="project-summary">A serverless photo search app that accepts natural language queries to find images by people, objects, and landmarks, powered by Amazon Rekognition for visual analysis and Amazon Lex for intent recognition.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">AWS Lex</span>
-                        <span class="tech-pill">Rekognition</span>
-                        <span class="tech-pill">Elasticsearch</span>
-                        <span class="tech-pill">CloudFormation</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">NLP</span><span class="stat-label">Query interface</span></div>
-                        <div class="highlight-stat"><span class="stat-num">CI/CD</span><span class="stat-label">Auto-deployed</span></div>
-                    </div>
-                </div>
+  </div>
+</div>
 
-                <div class="project-card" data-category="cloud">
-                    <div class="project-card-top">
-                        <div class="project-category-badge cloud">Cloud</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CC_Chatbot" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Dining Concierge</h3>
-                    <p class="project-subtitle">Restaurant Recommendation Chatbot</p>
-                    <p class="project-summary">A serverless restaurant recommendation chatbot built on AWS Lex and the Yelp API, delivering personalized recommendations via email within 2 minutes.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">AWS Lambda</span>
-                        <span class="tech-pill">Amazon Lex</span>
-                        <span class="tech-pill">DynamoDB</span>
-                        <span class="tech-pill">SQS</span>
-                        <span class="tech-pill">Yelp API</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">5000+</span><span class="stat-label">Restaurant records</span></div>
-                        <div class="highlight-stat"><span class="stat-num">&lt;2 min</span><span class="stat-label">Email delivery</span></div>
-                    </div>
-                </div>
+<!-- ── PUBLICATIONS ────────────────────────────────────────── -->
+<div class="section-wrap" id="publications">
+  <div class="section-header reveal">
+    <h2 class="section-title">Publications</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="pub-card reveal">
+    <div class="pub-body">
+      <div class="pub-tag">IEEE &middot; 2022</div>
+      <div class="pub-title">Smart Traffic Light Controller using Deep Reinforcement Learning</div>
+      <div class="pub-venue">3rd International Conference for Emerging Technology (INCET) &middot; Belgaum, India</div>
+      <div class="pub-authors">A. Abhishek, P. Nayak, K. P. Hegde, A. Lakshmi Prasad, K. S. Nagegowda &mdash; doi: 10.1109/INCET54531.2022.9824501</div>
+      <p class="pub-summary">Proposed a deep reinforcement learning approach for adaptive traffic signal control, trained using DQN in a SUMO simulation environment. Demonstrated significant reductions in queue length and average intersection delay compared to traditional static timing strategies.</p>
+    </div>
+    <a href="https://ieeexplore.ieee.org/document/9824501" target="_blank" class="pub-link-btn">
+      <i class="fas fa-arrow-up-right-from-square"></i> IEEE Xplore
+    </a>
+  </div>
+</div>
 
-                <div class="project-card" data-category="bigdata ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge bigdata">Big Data &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/DigiPulse" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">DigiPulse</h3>
-                    <p class="project-subtitle">Real-Time Trend Analysis</p>
-                    <p class="project-summary">End-to-end streaming pipeline that ingests BlueSky tweets, clusters trending topics with Spark ML, and auto-generates summaries with Gemini.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Kafka</span>
-                        <span class="tech-pill">Spark ML</span>
-                        <span class="tech-pill">MongoDB</span>
-                        <span class="tech-pill">Elasticsearch</span>
-                        <span class="tech-pill">Gemini</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">1M+</span><span class="stat-label">Tweets processed</span></div>
-                        <div class="highlight-stat"><span class="stat-num">Real-time</span><span class="stat-label">Topic summaries</span></div>
-                    </div>
-                </div>
+<!-- ── ACHIEVEMENTS ────────────────────────────────────────── -->
+<div class="section-wrap" id="achievements">
+  <div class="section-header reveal">
+    <h2 class="section-title">Awards &amp; Recognition</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="ach-grid">
 
-                <div class="project-card" data-category="cloud iot">
-                    <div class="project-card-top">
-                        <div class="project-category-badge iot">Cloud &amp; DevOps</div>
-                        <div class="project-links-top">
-                            <a href="https://www.intel.com/content/www/us/en/security/trust-authority.html" target="_blank" title="Official Page"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Intel® Trust Authority</h3>
-                    <p class="project-subtitle">SaaS Remote Attestation Platform</p>
-                    <p class="project-summary">Industry-first independent Trust Authority for verifying compute asset trustworthiness. Provisioned secure cloud environments and automated CI/CD pipelines across AWS and Azure.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Terraform</span>
-                        <span class="tech-pill">Ansible</span>
-                        <span class="tech-pill">Helm</span>
-                        <span class="tech-pill">GitHub Actions</span>
-                        <span class="tech-pill">AWS / Azure</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">99.95%</span><span class="stat-label">Uptime</span></div>
-                        <div class="highlight-stat"><span class="stat-num">3 min</span><span class="stat-label">Tenant onboarding</span></div>
-                    </div>
-                </div>
+    <div class="ach-card reveal">
+      <div class="ach-icon"><i class="fas fa-graduation-cap"></i></div>
+      <div>
+        <div class="ach-title">Graduate School of Engineering Scholarship</div>
+        <div class="ach-desc">Merit scholarship upon admission to NYU, recognizing exceptional academic achievements and potential for excellence in engineering studies.</div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="iot">
-                    <div class="project-card-top">
-                        <div class="project-category-badge iot">IoT &amp; Edge</div>
-                        <div class="project-links-top">
-                            <a href="https://www.intel.com/content/www/us/en/internet-of-things/industrial-iot/edge-insights-industrial.html" target="_blank" title="Official Page"><i class="fas fa-external-link-alt"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Intel® Edge Insights for Industrial</h3>
-                    <p class="project-subtitle">Industrial IoT Microservices Platform</p>
-                    <p class="project-summary">A pre-validated, ready-to-deploy software reference design for building smart, scalable factory solutions, providing the infrastructure layer for video and time-series data ingestion using microservices and edge computing.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Docker</span>
-                        <span class="tech-pill">Kubernetes</span>
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">Pytest</span>
-                        <span class="tech-pill">Snyk</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">96%</span><span class="stat-label">Test coverage</span></div>
-                        <div class="highlight-stat"><span class="stat-num">6+</span><span class="stat-label">Microservices</span></div>
-                    </div>
-                </div>
+    <div class="ach-card reveal">
+      <div class="ach-icon"><i class="fas fa-award"></i></div>
+      <div>
+        <div class="ach-title">Intel Department Recognition Award &middot; Y2023 Q2</div>
+        <div class="ach-desc">For exemplary achievements towards delivering a distributed computing platform for the intelligent network and edge, as part of Intel&reg; Edge Insights for Industrial.</div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">ML &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/Smart-traffic-light-controller-using-deep-reinforcement-learning" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                        <div class="project-links-top">
-                            <a href="https://ieeexplore.ieee.org/document/9824501" target="_blank" title="IEEE"><i class="fab fa-ieee"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Smart Traffic Light Controller using Deep Reinforcement Learning</h3>
-                    <p class="project-subtitle">RL Based traffic agent</p>
-                    <p class="project-summary">Adaptive traffic signal controller trained with Deep Q-Learning in SUMO simulation environment, reducing average intersection delay by 60% over static timing.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">PyTorch</span>
-                        <span class="tech-pill">Deep Q-Learning</span>
-                        <span class="tech-pill">SUMO</span>
-                        <span class="tech-pill">TraCI API</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">~80%</span><span class="stat-label">Queue reduction</span></div>
-                        <div class="highlight-stat"><span class="stat-num">1000+</span><span class="stat-label">Vehicles simulated</span></div>
-                    </div>
-                </div>
+    <div class="ach-card reveal">
+      <div class="ach-icon"><i class="fas fa-lightbulb"></i></div>
+      <div>
+        <div class="ach-title">Intel Flex Fearless Innovation Award &middot; Y2022 Q3</div>
+        <div class="ach-desc">For excellent work and role modelling on Innovation activities at Intel Flex.</div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="bigdata">
-                    <div class="project-card-top">
-                        <div class="project-category-badge bigdata">Big Data</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/Yet-Another-Centralized-Scheduler" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">YACS</h3>
-                    <p class="project-subtitle">Yet Another Centralized Scheduler</p>
-                    <p class="project-summary">Custom Hadoop 1.0 scheduling framework in Python featuring three algorithms (FCFS, Round Robin, and Least Loaded) with socket-based worker communication.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Python</span>
-                        <span class="tech-pill">Hadoop</span>
-                        <span class="tech-pill">Socket Programming</span>
-                        <span class="tech-pill">Multithreading</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">3</span><span class="stat-label">Scheduling algorithms</span></div>
-                        <div class="highlight-stat"><span class="stat-num">Fault</span><span class="stat-label">Tolerant design</span></div>
-                    </div>
-                </div>
+    <div class="ach-card reveal">
+      <div class="ach-icon"><i class="fas fa-medal"></i></div>
+      <div>
+        <div class="ach-title">Prof. MRD Merit Scholarship &middot; Semester 3</div>
+        <div class="ach-desc">Ranked in the top 20% at PES University with a SGPA of 8.77 in Semester 3.</div>
+      </div>
+    </div>
 
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">ML &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/Cifar_10_Image_Classification" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">CIFAR-10 Image Classification</h3>
-                    <p class="project-subtitle">Image Classification from Scratch using custom ResNet</p>
-                    <p class="project-summary">Designed and trained a 4.7M parameter ResNet (4-4-3 residual config) from scratch, benchmarking optimizers and schedulers with an aggressive augmentation pipeline.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">PyTorch</span>
-                        <span class="tech-pill">CNNs</span>
-                        <span class="tech-pill">SGD</span>
-                        <span class="tech-pill">MultiStepLR</span>
-                        <span class="tech-pill">ResNet</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">93.1%</span><span class="stat-label">Val accuracy</span></div>
-                        <div class="highlight-stat"><span class="stat-num">4.7M</span><span class="stat-label">Parameters</span></div>
-                    </div>
-                </div>
+  </div>
+</div>
 
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">ML &amp; AI</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/LLM-finetuning-using-LoRA" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">LoRA Fine-Tuning of RoBERTa for LLMs</h3>
-                    <p class="project-subtitle">Parameter-Efficient NLP Fine-Tuning</p>
-                    <p class="project-summary">Fine-tuned RoBERTa-base on AG News using LoRA adapters, training only 0.7% of parameters. Combined contextual data augmentation with student–teacher knowledge distillation.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">HuggingFace</span>
-                        <span class="tech-pill">PEFT / LoRA</span>
-                        <span class="tech-pill">RoBERTa</span>
-                        <span class="tech-pill">Distillation</span>
-                        <span class="tech-pill">NLP</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">84.8%</span><span class="stat-label">Test accuracy</span></div>
-                        <div class="highlight-stat"><span class="stat-num">0.7%</span><span class="stat-label">Params trained</span></div>
-                    </div>
-                </div>
+<!-- ── CONTACT ─────────────────────────────────────────────── -->
+<div class="section-wrap" id="contact">
+  <div class="section-header reveal">
+    <h2 class="section-title">Get In Touch</h2>
+    <div class="section-line"></div>
+  </div>
+  <div class="contact-wrap">
+    <div class="reveal">
+      <div class="contact-intro">Let's build something <span>interesting</span> together.</div>
+      <div class="contact-sub">Currently open to full-time SDE and ML Engineering roles starting Summer 2026. If you have an interesting problem or just want to chat, my inbox is always open.</div>
+    </div>
+    <div class="contact-items reveal">
+      <a href="mailto:aa12037@nyu.edu" class="contact-row">
+        <div class="contact-row-icon"><img src="assets/icons/gmail.svg" alt="Email"></div>
+        <div><div class="contact-row-label">Email</div><div class="contact-row-val">aa12037@nyu.edu</div></div>
+      </a>
+      <a href="tel:5166468996" class="contact-row">
+        <div class="contact-row-icon"><img src="assets/icons/phone.svg" alt="Phone"></div>
+        <div><div class="contact-row-label">Phone</div><div class="contact-row-val">(516) 646-8996</div></div>
+      </a>
+      <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank" class="contact-row">
+        <div class="contact-row-icon"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></div>
+        <div><div class="contact-row-label">LinkedIn</div><div class="contact-row-val">abhishek-adinarayanappa</div></div>
+      </a>
+      <a href="https://github.com/Abhi270600" target="_blank" class="contact-row">
+        <div class="contact-row-icon"><img src="assets/icons/github.svg" alt="GitHub"></div>
+        <div><div class="contact-row-label">GitHub</div><div class="contact-row-val">Abhi270600</div></div>
+      </a>
+    </div>
+  </div>
+</div>
 
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">Computer Vision</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Constellation-Detection" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Constellation Detection</h3>
-                    <p class="project-subtitle">Night Sky Pattern Recognition</p>
-                    <p class="project-summary">A two-stage pipeline that first localizes star patches in a night sky image via high-confidence template matching, then classifies the constellation by comparing geometric arrangements using the Hungarian algorithm.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">OpenCV</span>
-                        <span class="tech-pill">Template Matching</span>
-                        <span class="tech-pill">Hungarian Algorithm</span>
-                        <span class="tech-pill">Python</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">2-stage</span><span class="stat-label">Pipeline</span></div>
-                        <div class="highlight-stat"><span class="stat-num">Scale+Rot</span><span class="stat-label">Invariant</span></div>
-                    </div>
-                </div>
+<!-- ── FOOTER ──────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-left">
+    <strong>~/abhishek.dev</strong> &nbsp;&middot;&nbsp; &copy; 2025 Abhishek Adinarayanappa. All rights reserved.
+  </div>
+  <div class="footer-socials">
+    <a href="https://github.com/Abhi270600" target="_blank" aria-label="GitHub"><img src="assets/icons/github.svg" alt="GitHub"></a>
+    <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank" aria-label="LinkedIn"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
+    <a href="mailto:aa12037@nyu.edu" aria-label="Email"><img src="assets/icons/gmail.svg" alt="Email"></a>
+  </div>
+</footer>
 
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">Computer Vision</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Multi-Organ%20Nuclei%20Segmentation%20%26%20Classification" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Multi-Organ Nuclei Segmentation</h3>
-                    <p class="project-subtitle">Instance &amp; Semantic Segmentation</p>
-                    <p class="project-summary">Used Mask2Former (Swin-Base backbone, pre-trained on COCO panoptic) for joint instance and semantic segmentation of cell images, with augmentation to address severe class imbalance.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">Mask2Former</span>
-                        <span class="tech-pill">PyTorch</span>
-                        <span class="tech-pill">Swin Transformer</span>
-                        <span class="tech-pill">Panoptic Seg</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">Panoptic</span><span class="stat-label">Segmentation</span></div>
-                        <div class="highlight-stat"><span class="stat-num">COCO</span><span class="stat-label">Pre-trained</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">Computer Vision</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Baseball%20pitch%20tracking%20and%20prediction" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Baseball Pitch Tracker</h3>
-                    <p class="project-subtitle">Strike/Ball Prediction from Video</p>
-                    <p class="project-summary">Fine-tuned a 3D ResNet-18 video encoder to classify baseball pitches as strikes or balls, with a secondary head for pitch zone prediction. A joint loss across both heads drives the shared encoder, with YOLO handling ball tracking.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">3D ResNet-18</span>
-                        <span class="tech-pill">YOLOv8</span>
-                        <span class="tech-pill">PyTorch</span>
-                        <span class="tech-pill">Video ML</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">Dual</span><span class="stat-label">Output heads</span></div>
-                        <div class="highlight-stat"><span class="stat-num">3D CNN</span><span class="stat-label">Video encoder</span></div>
-                    </div>
-                </div>
-
-                <div class="project-card" data-category="ml">
-                    <div class="project-card-top">
-                        <div class="project-category-badge ml">Computer Vision</div>
-                        <div class="project-links-top">
-                            <a href="https://github.com/Abhi270600/CS-GY-6643-Computer-Vision-Projects/tree/main/Geoguessr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-                        </div>
-                    </div>
-                    <h3 class="project-title">GeoGuessr</h3>
-                    <p class="project-subtitle">Visual Geolocation from Street Images</p>
-                    <p class="project-summary">Predicted US state and GPS coordinates from 4 street-view images using StreetCLIP embeddings, with a custom State Classifier and GPS Regressor built on top for fine-grained geolocation.</p>
-                    <div class="project-tech-stack">
-                        <span class="tech-pill">StreetCLIP</span>
-                        <span class="tech-pill">PyTorch</span>
-                        <span class="tech-pill">GPS Regression</span>
-                        <span class="tech-pill">CLIP Embeddings</span>
-                    </div>
-                    <div class="project-highlights">
-                        <div class="highlight-stat"><span class="stat-num">96.6%</span><span class="stat-label">GPS score</span></div>
-                        <div class="highlight-stat"><span class="stat-num">90.5%</span><span class="stat-label">State accuracy</span></div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Publications Section -->
-    <section id="publications" class="section">
-        <div class="container">
-            <h2 class="section-title">Publications</h2>
-            <div class="publication-card">
-                <h3>Smart Traffic Light Controller using Deep Reinforcement Learning</h3>
-                <p class="pub-journal">IEEE 3rd International Conference for Emerging Technologies</p>
-                <p class="pub-desc"><strong>A. Abhishek, P. Nayak, K. P. Hegde, A. Lakshmi Prasad and K. S. Nagegowda, ”Smart Traffic Light Controller using Deep Reinforcement Learning,” 2022 3rd International Conference for Emerging Technology (INCET), Belgaum, India, 2022, pp. 1-5, doi: 10.1109/INCET54531.2022.9824501.</strong></p>
-                <ul class="pub-highlights">
-                    <li>Proposed a deep reinforcement learning-based approach for adaptive traffic signal control, addressing real-world congestion challenges using simulation-driven experimentation.</li>
-                    <li>The simulation environment is built using SUMO and interfaced through the TraCI API for real-time interaction.</li>
-                    <li>Conducted extensive performance analysis of ANN and CNN models across varying intersection complexities, highlighting the impact of architecture and training depth.</li>
-                    <li>State representation is handled using Discrete Traffic State Encoding (DTSE), with an epsilon-greedy policy and experience replay for training.</li>
-                    <li>The model behavior is evaluated using metrics like queue length and cumulative delay, demonstrating measurable improvements over traditional signal timing strategies.</li>
-                </ul>
-
-                <a href="https://ieeexplore.ieee.org/document/9824501" class="pub-link" target="_blank">
-                    <i class="fas fa-external-link-alt"></i> View on IEEE Xplore
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Achievements</h2>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Graduate School of Engineering Scholarship</h3>
-                    <p>Honored with merit scholarship upon admission to New York University, recognizing exceptional academic achievements and potential for excellence in engineering studies.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Intel Department Recognition Award (Y2023 Q2)</h3>
-                    <p>For exemplary achievements towards delivering to the vision of a distributed computing platform for the intelligent network and edge. Received this award as part of Intel® Edge Insights for Industrial.</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h3>Intel Flex Fearless Innovation Award (Y2022 Q3)</h3>
-                    <p>For excellent work and role modeling on Innovation activities at Intel Flex</p>
-                </div>
-                <div class="achievement-card">
-                    <div class="achievement-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Prof. MRD Merit Scholarship (Semester 3)</h3>
-                    <p>Ranked in the top 20% at PES University with a SGPA of 8.77 in Semester 3.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-columns">
-                <!-- Left Column -->
-                <div class="contact-col">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <img src="assets/icons/gmail.svg" alt="Email">
-                        </div>
-                        <div class="contact-info">
-                            <h3>Email</h3>
-                            <a href="mailto:aa12037@nyu.edu">aa12037@nyu.edu</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <img src="assets/icons/phone.svg" alt="Phone">
-                        </div>
-                        <div class="contact-info">
-                            <h3>Phone</h3>
-                            <a href="tel:5166468996">(516) 646-8996</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column -->
-                <div class="contact-col">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <img src="assets/icons/linkedin.svg" alt="LinkedIn">
-                        </div>
-                        <div class="contact-info">
-                            <h3>LinkedIn</h3>
-                            <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank">abhishek-adinarayanappa</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <img src="assets/icons/github.svg" alt="GitHub">
-                        </div>
-                        <div class="contact-info">
-                            <h3>GitHub</h3>
-                            <a href="https://github.com/Abhi270600" target="_blank">Abhi270600</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://github.com/Abhi270600" target="_blank"><img src="assets/icons/github.svg" alt="GitHub"></a>
-                <a href="https://linkedin.com/in/abhishek-adinarayanappa" target="_blank"><img src="assets/icons/linkedin.svg" alt="LinkedIn"></a>
-                </a>
-                <a href="mailto:aa12037@nyu.edu"><img src="assets/icons/gmail.svg" alt="Email"></a>
-            </div>
-            <p class="footer-text">&copy; 2025 Abhishek Adinarayanappa. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-    // ── Mobile nav ──────────────────────────────────────────────────
-    var hamburger = document.querySelector('.hamburger');
-    var navMenu   = document.querySelector('.nav-links');
-
-    hamburger.addEventListener('click', function() {
-        navMenu.classList.toggle('active');
-        hamburger.classList.toggle('active');
-    });
-
-    document.querySelectorAll('.nav-links li').forEach(function(item) {
-        item.addEventListener('click', function() {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        });
-    });
-
-    document.addEventListener('click', function(e) {
-        if (!hamburger.contains(e.target) && !navMenu.contains(e.target) && navMenu.classList.contains('active')) {
-            navMenu.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-
-    // ── Navbar scroll ───────────────────────────────────────────────
-    window.addEventListener('scroll', function() {
-        var navbar = document.getElementById('navbar');
-        if (window.scrollY > 50) navbar.classList.add('scrolled');
-        else navbar.classList.remove('scrolled');
-    });
-
-    // ── Scroll animations (non-project cards) ──────────────────────
-    function animateOnScroll() {
-        document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card').forEach(function(el) {
-            if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0)';
-            }
-        });
-    }
-
-    document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card').forEach(function(el) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-
-    animateOnScroll();
-    window.addEventListener('scroll', animateOnScroll);
-
-    // ── Project category filter ─────────────────────────────────────
-    var filterBtns   = document.querySelectorAll('.filter-btn');
-    var projectCards = document.querySelectorAll('.project-card');
-
-    function applyFilter(filter) {
-        var delay = 0;
-        projectCards.forEach(function(card) {
-            var cats = (card.getAttribute('data-category') || '').split(' ');
-            var show = (filter === 'all') || (cats.indexOf(filter) !== -1);
-
-            if (show) {
-                card.style.display = 'flex';
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(16px)';
-                (function(c, d) {
-                    setTimeout(function() {
-                        c.style.opacity = '1';
-                        c.style.transform = 'translateY(0)';
-                    }, d);
-                })(card, delay);
-                delay += 60;
-            } else {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(8px)';
-                (function(c) {
-                    setTimeout(function() { c.style.display = 'none'; }, 300);
-                })(card);
-            }
-        });
-    }
-
-    filterBtns.forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            filterBtns.forEach(function(b) { b.classList.remove('active'); });
-            btn.classList.add('active');
-            applyFilter(btn.getAttribute('data-filter'));
-        });
-    });
-
-    // ── Smooth scroll ───────────────────────────────────────────────
-    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-        anchor.addEventListener('click', function(e) {
-            var target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
-            }
-        });
-    });
-    </script>
+<script src="js/main.js"></script>
 </body>
 </html>

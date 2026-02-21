@@ -1,110 +1,146 @@
-// Mobile Navigation Toggle
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links li');
+// ── Custom cursor ──────────────────────────────────────────────
+var cur = document.getElementById('cur');
+var ring = document.getElementById('cur-ring');
+var mx = 0, my = 0, rx = 0, ry = 0;
 
-hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    hamburger.classList.toggle('active');
+document.addEventListener('mousemove', function(e) {
+  mx = e.clientX; my = e.clientY;
+  cur.style.left = mx + 'px';
+  cur.style.top  = my + 'px';
 });
 
-navItems.forEach(item => {
-    item.addEventListener('click', () => {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
-    });
+(function animRing() {
+  rx += (mx - rx) * 0.12;
+  ry += (my - ry) * 0.12;
+  ring.style.left = rx + 'px';
+  ring.style.top  = ry + 'px';
+  requestAnimationFrame(animRing);
+})();
+
+document.querySelectorAll('a, button, .proj-card, .tl-content, .edu-card, .ach-card, .contact-row, .skill-tag').forEach(function(el) {
+  el.addEventListener('mouseenter', function() { cur.classList.add('hover'); ring.classList.add('hover'); });
+  el.addEventListener('mouseleave', function() { cur.classList.remove('hover'); ring.classList.remove('hover'); });
 });
 
-document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
-        navLinks.classList.remove('active');
-        hamburger.classList.remove('active');
+// ── Typed role ─────────────────────────────────────────────────
+var roles = ['Software Engineer', 'ML Engineer', 'Backend Developer', 'CS @ NYU'];
+var ri = 0, ci = 0, deleting = false;
+var typed = document.getElementById('typed-role');
+
+function typeRole() {
+  var word = roles[ri];
+  if (!deleting) {
+    typed.textContent = word.slice(0, ++ci);
+    if (ci === word.length) { deleting = true; setTimeout(typeRole, 1800); return; }
+  } else {
+    typed.textContent = word.slice(0, --ci);
+    if (ci === 0) { deleting = false; ri = (ri + 1) % roles.length; }
+  }
+  setTimeout(typeRole, deleting ? 55 : 85);
+}
+typeRole();
+
+// ── Navbar ─────────────────────────────────────────────────────
+var navbar    = document.getElementById('navbar');
+var hamburger = document.getElementById('hamburger');
+var navLinks  = document.getElementById('navLinks');
+
+window.addEventListener('scroll', function() {
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+hamburger.addEventListener('click', function() {
+  navLinks.classList.toggle('active');
+  hamburger.classList.toggle('active');
+});
+
+document.querySelectorAll('.nav-links a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+  });
+});
+
+document.addEventListener('click', function(e) {
+  if (!hamburger.contains(e.target) && !navLinks.contains(e.target) && navLinks.classList.contains('active')) {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+var resizeTimer;
+window.addEventListener('resize', function() {
+  document.body.classList.add('resize-animation-stopper');
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() { document.body.classList.remove('resize-animation-stopper'); }, 400);
+  if (window.innerWidth > 768) {
+    navLinks.classList.remove('active');
+    hamburger.classList.remove('active');
+  }
+});
+
+// ── Scroll reveal ──────────────────────────────────────────────
+var revealObserver = new IntersectionObserver(function(entries) {
+  entries.forEach(function(e) {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
     }
-});
+  });
+}, { threshold: 0.07 });
 
-// Navbar scroll effect
-window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('scrolled');
+document.querySelectorAll('.reveal').forEach(function(el) { revealObserver.observe(el); });
+
+// ── Project filter ─────────────────────────────────────────────
+var pfBtns    = document.querySelectorAll('.pf-btn');
+var projCards = document.querySelectorAll('.proj-card');
+
+function applyFilter(filter) {
+  var delay = 0;
+  projCards.forEach(function(card) {
+    var cats = (card.getAttribute('data-category') || '').split(' ');
+    var show = filter === 'all' || cats.indexOf(filter) !== -1;
+    if (show) {
+      card.style.display = 'flex';
+      card.getBoundingClientRect();
+      card.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
+      card.style.opacity = '0';
+      card.style.transform = 'translateY(14px)';
+      (function(c, d) {
+        setTimeout(function() {
+          c.style.opacity = '1';
+          c.style.transform = 'translateY(0)';
+        }, d);
+      })(card, delay);
+      delay += 55;
     } else {
-        navbar.classList.remove('scrolled');
+      card.style.transition = 'opacity 0.25s ease';
+      card.style.opacity = '0';
+      setTimeout(function() { card.style.display = 'none'; }, 260);
     }
+  });
+}
+
+pfBtns.forEach(function(btn) {
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    pfBtns.forEach(function(b) { b.classList.remove('active'); });
+    btn.classList.add('active');
+    applyFilter(btn.getAttribute('data-filter'));
+  });
 });
 
-// Scroll-triggered animations (NOT project cards)
-const animateOnScroll = () => {
-    const elements = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card');
-    elements.forEach(el => {
-        if (el.getBoundingClientRect().top < window.innerHeight / 1.2) {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        }
-    });
-};
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Scroll animations for non-project elements
-    const animatedEls = document.querySelectorAll('.education-card, .timeline-content, .skill-item, .achievement-card');
-    animatedEls.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    });
-    animateOnScroll();
-
-    // Window resize
-    let resizeTimer;
-    window.addEventListener('resize', () => {
-        document.body.classList.add('resize-animation-stopper');
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => document.body.classList.remove('resize-animation-stopper'), 400);
-        if (window.innerWidth > 992) {
-            navLinks.classList.remove('active');
-            hamburger.classList.remove('active');
-        }
-    });
-
-    // ── Project filter ──────────────────────────────────────────────
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    function applyFilter(filter) {
-        let delay = 0;
-        projectCards.forEach(card => {
-            const cats = (card.getAttribute('data-category') || '').split(' ');
-            const show = filter === 'all' || cats.includes(filter);
-
-            if (show) {
-                card.style.display = 'flex';
-                // Force reflow so transition fires
-                card.getBoundingClientRect();
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(16px)';
-                setTimeout(() => {
-                    card.style.opacity = '1';
-                    card.style.transform = 'translateY(0)';
-                }, delay);
-                delay += 60;
-            } else {
-                card.style.opacity = '0';
-                card.style.transform = 'translateY(8px)';
-                setTimeout(() => { card.style.display = 'none'; }, 300);
-            }
-        });
+// ── Smooth scroll ──────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+  a.addEventListener('click', function(e) {
+    var target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      window.scrollTo({ top: target.offsetTop - 60, behavior: 'smooth' });
     }
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation(); // prevent document click handler interfering
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            applyFilter(btn.getAttribute('data-filter'));
-        });
-    });
-
-    // Init: show all
-    applyFilter('all');
+  });
 });
 
-window.addEventListener('scroll', animateOnScroll);
+document.addEventListener('DOMContentLoaded', function() {
+  applyFilter('all');
+});
