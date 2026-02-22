@@ -23,7 +23,7 @@ document.querySelectorAll('a, button, .proj-card, .tl-content, .edu-card, .ach-c
 });
 
 // ── Typed role ─────────────────────────────────────────────────
-var roles = ['Software Engineer', 'ML Engineer', 'Backend Developer', 'CS @ NYU'];
+var roles = ['Software Engineer', 'Backend Developer', 'ML Engineer', 'CS @ NYU'];
 var ri = 0, ci = 0, deleting = false;
 var typed = document.getElementById('typed-role');
 
