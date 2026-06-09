@@ -219,9 +219,9 @@ h1.name em { font-style: italic; color: var(--green); }
   border-radius: 12px; overflow: hidden; z-index: 2;
 }
 .hero-photo-frame img {
-  width: 100%; height: 100%; object-fit: cover; object-position: 40% 40%;
-  filter: grayscale(10%) contrast(1.05); transition: filter 0.4s; transform: scale(1.6);
-  transform-origin: 40% 40%;
+  width: 100%; height: 100%; object-fit: cover; object-position: 50% 60%;
+  filter: grayscale(10%) contrast(1.05); transition: filter 0.4s; transform: scale(1.0);
+  transform-origin: 50% 60%;
 }
 .hero-photo-frame:hover img { filter: grayscale(0%) contrast(1); }
 .hero-photo-frame::after {
@@ -273,13 +273,13 @@ h1.name em { font-style: italic; color: var(--green); }
 .edu-school { font-family: var(--serif); font-size: 1.2rem; color: var(--text); }
 .edu-location { font-family: var(--mono); font-size: 0.67rem; color: var(--muted); }
 .edu-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px; flex-wrap: wrap; gap: 4px; }
-.edu-degree { font-family: var(--mono); font-size: 0.72rem; color: var(--green); letter-spacing: 0.02em; }
+.edu-degree { font-family: var(--mono); font-size: 0.72rem; color: var(--blue); letter-spacing: 0.02em; }
 .edu-date { font-family: var(--mono); font-size: 0.67rem; color: var(--muted); }
-.edu-gpa { font-family: var(--mono); font-size: 0.73rem; color: var(--amber); margin-bottom: 8px; }
+.edu-gpa { font-family: var(--mono); font-size: 0.73rem; color: var(--green); margin-bottom: 8px; }
 .edu-courses { font-size: 0.8rem; color: var(--muted); line-height: 1.55; margin-bottom: 13px; }
 .edu-link {
   display: inline-flex; align-items: center; gap: 6px;
-  font-family: var(--mono); font-size: 0.68rem; color: var(--blue);
+  font-family: var(--mono); font-size: 0.68rem; color: var(--text);
   text-decoration: none; letter-spacing: 0.04em; transition: color 0.2s;
 }
 .edu-link:hover { color: #79c0ff; }
